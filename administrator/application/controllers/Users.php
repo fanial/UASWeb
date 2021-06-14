@@ -3,8 +3,6 @@
 /*****************************************************/
 /* File        : Users.php                           */
 /* Lokasi File : ./application/controllers/Users.php */
-/* Copyright   : Yosef Murya & Badiyanto             */
-/* Publish     : Penerbit Langit Inspirasi           */
 /*---------------------------------------------------*/
 
 if (!defined('BASEPATH'))
