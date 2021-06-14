@@ -164,9 +164,7 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>
-		SELAMAT DATANG DI SISTEM AKADEMIK       
-      </h1>
+      <h1> SELAMAT DATANG DI SISTEM AKADEMIK </h1>
       <ol class="breadcrumb">
         <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>        
         <li class="active">Control Panel</li>
@@ -249,7 +247,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
-    <strong>Copyright &copy; 2021 || <a href> Rekayasa Perangkat Lunak</a>.</strong> All rights
+    <strong>Copyright &copy; 2021 ||<a href> Rekayasa Perangkat Lunak</a>.</strong> All rights
     reserved.
   </footer>
 
