@@ -1,16 +1,10 @@
-<!-------------------------------------------------------*/
-/* Copyright   : Yosef Murya & Badiyanto                 */
-/* Publish     : Penerbit Langit Inspirasi               */
-/*-------------------------------------------------------->
 <!doctype html>
 <html>
     <head>
         <title>Detail users</title>
         <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>"/>
         <style>
-            body{
-                padding: 15px;
-            }
+            body{padding: 15px;}
         </style>
     </head>
     <body>

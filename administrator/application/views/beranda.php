@@ -40,7 +40,7 @@
     <!-- Logo -->
     <a href="admin" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>Langit</b>Inspirasi</span>
+      <span class="logo-mini"><b>RPL</span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>SIAKAD</b></span>
     </a>
@@ -69,7 +69,7 @@
 
                 <p>
                   <?php echo $username; ?> - <?php echo $wa; ?>
-                  <small><?php echo $univ; ?></small>
+                  <small><?php echo "STMIK Mardira Indonesia"; ?></small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -164,16 +164,7 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>
-        HII..
-		<?php
-			echo strtoupper($username); 
-		?>
-		SELAMAT DATANG DI SIAKAD 
-		<?php		
-			echo strtoupper($univ);				
-		?>		        
-      </h1>
+      <h1> SELAMAT DATANG DI SISTEM AKADEMIK </h1>
       <ol class="breadcrumb">
         <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>        
         <li class="active">Control Panel</li>
@@ -241,7 +232,7 @@
 		  </div>        
         <!-- /.box-body -->
         <div class="box-footer">
-         <center>SIAKAD <a href="http://www.langitinspirasi.co.id"><strong>Univ Langit Inspirasi</strong></a> - 2018</center>
+         <center>SIAKAD <strong> JUM'AT</strong> - 2021</center>
         </div>
         <!-- /.box-footer-->
       </div>
@@ -256,7 +247,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
-    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+    <strong>Copyright &copy; 2021 ||<a href> Rekayasa Perangkat Lunak</a>.</strong> All rights
     reserved.
   </footer>
 

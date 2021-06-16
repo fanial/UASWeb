@@ -2,8 +2,6 @@
 /******************************************************/
 /* File        : Users_model.php                      */
 /* Lokasi File : ./application/models/Users_model.php */
-/* Copyright   : Yosef Murya & Badiyanto              */
-/* Publish     : Penerbit Langit Inspirasi            */
 /*----------------------------------------------------*/
 
 if (!defined('BASEPATH'))
