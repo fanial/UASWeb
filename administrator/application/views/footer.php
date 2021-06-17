@@ -1,7 +1,7 @@
 	</div>
 			<!-- /.box-body -->
 			<div class="box-footer">
-				<center>SIAKAD JUM'AT - 2021</center>
+				<center><strong>SIAKAD JUM'AT - 2021</center></strong>
 			</div>
 			<!-- /.box-footer-->
 		  </div>

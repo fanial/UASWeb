@@ -1,7 +1,6 @@
 <section class="content-header">
       <h1>
-        Universitas Langit Inspirasi
-        <small>code your life with your style</small>
+        STMIK Mardira Indonesia
       </h1>
       <ol class="breadcrumb">
         <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>        
