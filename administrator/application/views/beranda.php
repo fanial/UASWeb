@@ -42,7 +42,7 @@ ini_set('error_reporting', E_ALL);
       <!-- Logo -->
       <a href="admin" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>RPL</span>
+        <span class="logo-mini"><b>Langit</b>Inspirasi</span>
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg"><b>SIAKAD</b></span>
       </a>
@@ -71,7 +71,7 @@ ini_set('error_reporting', E_ALL);
 
                   <p>
                     <?php echo $username; ?> - <?php echo $wa; ?>
-                    <small><?php echo "STMIK Mardira Indonesia"; ?></small>
+                    <small><?php echo $univ; ?></small>
                   </p>
                 </li>
                 <!-- Menu Body -->
@@ -127,7 +127,7 @@ ini_set('error_reporting', E_ALL);
           $main_menu = $this->db->get_where('menu', array('main_menu' => 0));
           foreach ($main_menu->result() as $main) {
             // Query untuk mencari data sub menu
-            $sub_menu = $this->db->get_where('menu', array('main_menu' => $main->id_menu, 'level' => $level));
+            $sub_menu = $this->db->get_where('menu', array('main_menu' => $main->id_menu));
             // Memeriksa apakah ada sub menu, jika ada sub menu tampilkan
             if ($sub_menu->num_rows() > 0) {
               if ($main->id_menu > 0) {
@@ -147,7 +147,7 @@ ini_set('error_reporting', E_ALL);
             }
             // Jika tidak memiliki sub menu maka tampilkan data main menu
             else {
-              if ($main->id_menu > 0 and $main->level == 'user') {
+              if ($main->id_menu > 0) {
                 // Data main menu tanpa sub menu
                 echo "<li>" . anchor($main->link, '<i class="' . $main->icon . '"></i>' . $main->nama_menu) . "</li>";
               }
@@ -166,7 +166,16 @@ ini_set('error_reporting', E_ALL);
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
       <section class="content-header">
-        <h1> SELAMAT DATANG DI SISTEM AKADEMIK </h1>
+        <h1>
+          HII..
+          <?php
+          echo strtoupper($username);
+          ?>
+          SELAMAT DATANG DI SIAKAD
+          <?php
+          echo strtoupper($univ);
+          ?>
+        </h1>
         <ol class="breadcrumb">
           <li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
           <li class="active">Control Panel</li>
@@ -185,31 +194,21 @@ ini_set('error_reporting', E_ALL);
             <div class="box-body">
               <div class="row">
                 <div class="col-sm-4 col-md-2">
-                  <h4 class="text-center"><span class="info-box-text">User</span></h4>
+                  <h4 class="text-center"><span class="info-box-text">Mahasiswa</span></h4>
 
                   <div class="color-palette-set">
-                    <a href="<?php echo site_url('users') ?>">
+                    <a href="<?php echo site_url('mahasiswa') ?>">
                       <center><i class="fa fa-user" style="font-size:48px;color:#3c8dbc"></i>
                         <center>
                     </a>
                   </div>
                 </div>
+                <!-- /.col -->
                 <div class="col-sm-4 col-md-2">
-                  <h4 class="text-center"><span class="info-box-text">Matakuliah</span></h4>
-
+                  <h4 class="text-center"><span class="info-box-text">Tahun Akademik</span></h4>
                   <div class="color-palette-set">
-                    <a href="<?php echo site_url('matakuliah') ?>">
-                      <center><i class="fa fa-bookmark-o" style="font-size:48px;color:#3c8dbc"></i>
-                        <center>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-md-2">
-                  <h4 class="text-center"><span class="info-box-text">Mahasiswa</span></h4>
-
-                  <div class="color-palette-set">
-                    <a href="<?php echo site_url('mahasiswa') ?>">
-                      <center><i class="fa fa-users" style="font-size:48px;color:#3c8dbc"></i>
+                    <a href="<?php echo site_url('Thn_akad_semester') ?>">
+                      <center><i class="fa fa-calendar-o" style="font-size:48px;color:#3c8dbc"></i>
                         <center>
                     </a>
                   </div>
@@ -236,9 +235,19 @@ ini_set('error_reporting', E_ALL);
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-4 col-md-2">
+                  <h4 class="text-center"><span class="info-box-text">Input Nilai</span></h4>
+                  <div class="color-palette-set">
+                    <a href="<?php echo site_url('inputNilai') ?>">
+                      <center><i class="fa fa-sort-numeric-asc" style="font-size:48px;color:#3c8dbc"></i>
+                        <center>
+                    </a>
+                  </div>
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4 col-md-2">
                   <h4 class="text-center"><span class="info-box-text">Cetak Transkrip</span></h4>
                   <div class="color-palette-set">
-                    <a href="<?php echo site_url('nilai/buatTranskrip') ?>">
+                    <a href="<?php echo site_url('buatTranskrip') ?>">
                       <center><i class="fa fa-print" style="font-size:48px;color:#3c8dbc"></i>
                         <center>
                     </a>
@@ -247,12 +256,76 @@ ini_set('error_reporting', E_ALL);
                 <!-- /.col -->
               </div>
               <br /><br />
+              <!-- /.row -->
+              <div class="row">
+                <div class="col-sm-4 col-md-2">
+                  <h4 class="text-center"><span class="info-box-text">Kategori</span></h4>
+                  <div class="color-palette-set">
+                    <a href="<?php echo site_url('kategori') ?>">
+                      <center><i class="fa fa-server" style="font-size:48px;color:#3c8dbc"></i>
+                        <center>
+                    </a>
+                  </div>
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4 col-md-2">
+                  <h4 class="text-center"><span class="info-box-text">Info Kampus</span></h4>
+                  <div class="color-palette-set">
+                    <a href="<?php echo site_url('informasi') ?>">
+                      <center><i class="fa fa-globe" style="font-size:48px;color:#3c8dbc"></i>
+                        <center>
+                    </a>
+                  </div>
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4 col-md-2">
+                  <h4 class="text-center"><span class="info-box-text">Identitas</span></h4>
+                  <div class="color-palette-set">
+                    <a href="<?php echo site_url('identitas') ?>">
+                      <center><i class="fa fa-vcard-o" style="font-size:48px;color:#3c8dbc"></i>
+                        <center>
+                    </a>
+                  </div>
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4 col-md-2">
+                  <h4 class="text-center"><span class="info-box-text">Tentang Kampus</span></h4>
+                  <div class="color-palette-set">
+                    <a href="<?php echo site_url('tentang_kampus') ?>">
+                      <center><i class="fa fa-info" style="font-size:48px;color:#3c8dbc"></i>
+                        <center>
+                    </a>
+                  </div>
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4 col-md-2">
+                  <h4 class="text-center"><span class="info-box-text">Fasilitas</span></h4>
+                  <div class="color-palette-set">
+                    <a href="<?php echo site_url('fasilitas') ?>">
+                      <center><i class="fa fa-suitcase" style="font-size:48px;color:#3c8dbc"></i>
+                        <center>
+                    </a>
+                  </div>
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4 col-md-2">
+                  <h4 class="text-center"><span class="info-box-text">Gallery</span></h4>
+                  <div class="color-palette-set">
+                    <a href="<?php echo site_url('gallery') ?>">
+                      <center><i class="fa fa-photo" style="font-size:48px;color:#3c8dbc"></i>
+                        <center>
+                    </a>
+                  </div>
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
             </div>
             <!-- /.box-body -->
           </div>
           <!-- /.box-body -->
           <div class="box-footer">
-            <center>SIAKAD <strong> JUM'AT</strong> - 2021</center>
+            <center>SIAKAD <a href="http://www.langitinspirasi.co.id"><strong>Univ Langit Inspirasi</strong></a> - 2018</center>
           </div>
           <!-- /.box-footer-->
         </div>
@@ -267,7 +340,7 @@ ini_set('error_reporting', E_ALL);
       <div class="pull-right hidden-xs">
         <b>Version</b> 2.4.0
       </div>
-      <strong>Copyright &copy; 2021 ||<a href> Rekayasa Perangkat Lunak</a>.</strong> All rights
+      <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
       reserved.
     </footer>
 
