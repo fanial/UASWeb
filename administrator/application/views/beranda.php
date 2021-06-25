@@ -42,7 +42,7 @@ ini_set('error_reporting', E_ALL);
       <!-- Logo -->
       <a href="admin" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>Langit</b>Inspirasi</span>
+        <span class="logo-mini"><b>RPL</b>Jum'at</span>
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg"><b>SIAKAD</b></span>
       </a>
@@ -325,7 +325,7 @@ ini_set('error_reporting', E_ALL);
           </div>
           <!-- /.box-body -->
           <div class="box-footer">
-            <center>SIAKAD <a href="http://www.langitinspirasi.co.id"><strong>Univ Langit Inspirasi</strong></a> - 2018</center>
+            <center><strong>SIAKAD JUM'AT - 2021</strong></a></center>
           </div>
           <!-- /.box-footer-->
         </div>
@@ -340,7 +340,7 @@ ini_set('error_reporting', E_ALL);
       <div class="pull-right hidden-xs">
         <b>Version</b> 2.4.0
       </div>
-      <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+      <strong>Copyright &copy; 2021 ||<a href> Rekayasa Perangkat Lunak</a>.</strong> All rights
       reserved.
     </footer>
 
