@@ -4,6 +4,7 @@
 /* Lokasi File : ./application/controllers/Identitas.php */
 /*-------------------------------------------------------*/
 
+
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 

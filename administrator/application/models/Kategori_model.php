@@ -90,6 +90,7 @@ class Kategori_model extends CI_Model
 
 }
 
+
 /* End of file Kategori_model.php */
 /* Location: ./application/models/Kategori_model.php */
 /* Please DO NOT modify this information : */

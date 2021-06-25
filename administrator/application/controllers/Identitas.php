@@ -242,7 +242,6 @@ class Identitas extends CI_Controller
 
 }
 
-
 /* End of file Identitas.php */
 /* Location: ./application/controllers/Identitas.php */
 /* Please DO NOT modify this information : */

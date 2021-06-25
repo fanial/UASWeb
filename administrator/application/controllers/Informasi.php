@@ -358,6 +358,7 @@ class Informasi extends CI_Controller
 
 }
 
+
 /* End of file Informasi.php */
 /* Location: ./application/controllers/Informasi.php */
 /* Please DO NOT modify this information : */

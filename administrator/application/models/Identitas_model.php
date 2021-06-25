@@ -98,5 +98,6 @@ class Identitas_model extends CI_Model
 
 }
 
+
 /* End of file Identitas_model.php */
 /* Location: ./application/models/Identitas_model.php */

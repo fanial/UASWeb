@@ -107,6 +107,7 @@ class Informasi_model extends CI_Model
 
 }
 
+
 /* End of file Informasi_model.php */
 /* Location: ./application/models/Informasi_model.php */
 /* Please DO NOT modify this information : */

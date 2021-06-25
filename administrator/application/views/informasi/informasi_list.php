@@ -103,4 +103,5 @@
                 });
             });
         </script>
+        
         <!--// Tampil Data Informasi -->

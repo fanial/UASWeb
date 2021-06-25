@@ -92,4 +92,5 @@
 	    <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
 	    <a href="<?php echo site_url('identitas') ?>" class="btn btn-default">Cancel</a>
 	</form>
+    
     <!--// Form Identitas -->

@@ -80,4 +80,5 @@
 	    <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
 	    <a href="<?php echo site_url('informasi') ?>" class="btn btn-default">Cancel</a>
 	</form>
+	
     <!--// Form Informasi -->
