@@ -1,9 +1,4 @@
 <?php
-/******************************************/
-/* File    :Kontak_model.php                       */
-/* Location: ./application/models/Kontak_model.php */
-/******************************************/
-
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 

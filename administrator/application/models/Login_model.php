@@ -1,10 +1,4 @@
 <?php
-/***************************************************/
-/* File        : Login_model.php                     */
-/* Lokasi File : ./application/models/Login_model.php */
-/* Copyright   : Yosef Murya & Badiyanto           */
-/* Publish     : Penerbit Langit Inspirasi         */
-/*-------------------------------------------------*/
   if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 

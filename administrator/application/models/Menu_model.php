@@ -1,9 +1,4 @@
 <?php
-/****************************************************/
-/* File        : Menu_model.php                     */
-/* Lokasi File : ./application/models/Menu_model.php */
-/*--------------------------------------------------*/
-
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
