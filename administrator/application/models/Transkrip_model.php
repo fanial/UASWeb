@@ -1,11 +1,4 @@
 <?php
-/**********************************************************/
-/* File        : Transkrip_model.php                      */
-/* Lokasi File : ./application/models/Transkrip_model.php */
-/* Copyright   : Yosef Murya & Badiyanto                  */
-/* Publish     : Penerbit Langit Inspirasi                */
-/*--------------------------------------------------------*/
-
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 

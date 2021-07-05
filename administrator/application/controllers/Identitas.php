@@ -1,9 +1,4 @@
 <?php
-/*********************************************************/
-/* File        : Identitas.php                           */
-/* Lokasi File : ./application/controllers/Identitas.php */
-/*-------------------------------------------------------*/
-
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
@@ -35,7 +30,7 @@ class Identitas extends CI_Controller
 		$row = $this->Users_model->get_by_id($this->session->userdata['username']);
 		$data = array(	
 			'wa'       => 'Web administrator',
-			'univ'     => 'Universitas Langit Inspirasi',
+			'univ'     => 'STMIK Mardira Indonesia',
 			'username' => $row->username,
 			'email'    => $row->email,
 			'level'    => $row->level,
@@ -91,7 +86,7 @@ class Identitas extends CI_Controller
 		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
 		$dataAdm = array(	
 				'wa'       => 'Web administrator',
-				'univ'     => 'Universitas Langit Inspirasi',
+				'univ'     => 'STMIK Mardira Indonesia',
 				'username' => $rowAdm->username,
 				'email'    => $rowAdm->email,
 				'level'    => $rowAdm->level,

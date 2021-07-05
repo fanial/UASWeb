@@ -1,7 +1,3 @@
-<!-------------------------------------------------------*/
-/* Copyright   : Yosef Murya & Badiyanto                 */
-/* Publish     : Penerbit Langit Inspirasi               */
-/*-------------------------------------------------------->
 <!DOCTYPE html>
 <html>
 

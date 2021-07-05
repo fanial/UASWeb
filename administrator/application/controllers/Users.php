@@ -1,10 +1,4 @@
 <?php 
-
-/*****************************************************/
-/* File        : Users.php                           */
-/* Lokasi File : ./application/controllers/Users.php */
-/*---------------------------------------------------*/
-
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 

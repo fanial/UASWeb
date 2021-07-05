@@ -1,7 +1,3 @@
-<!-------------------------------------------------------*/
-/* Copyright   : Yosef Murya & Badiyanto                 */
-/* Publish     : Penerbit Langit Inspirasi               */
-/*-------------------------------------------------------->
 <section class="content-header">
       <h1>
 	  STMIK Mardira Indonesia

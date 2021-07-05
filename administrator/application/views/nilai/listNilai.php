@@ -1,8 +1,3 @@
-
-<!-------------------------------------------------------*/
-/* Copyright   : Yosef Murya & Badiyanto                 */
-/* Publish     : Penerbit Langit Inspirasi               */
-/*-------------------------------------------------------->
 <?php
 $ci = get_instance(); // Memanggil object utama	  
 $ci->load->model('Matakuliah_model'); // Memanggil Matakuliah_model yang terdapat pada model
