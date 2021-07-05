@@ -10,7 +10,7 @@ class Login extends CI_Controller {
     parent::__construct();
 	// Jika session data username dan password sesuai dengan yang ada didalam database 
 	// maka halaman admin akan dibuka
-    if ($this->session->userdata('username') AND $this->session->userdata('password') AND $this->session->userdata('level')=='user') {
+    if ($this->session->userdata('username') AND $this->session->userdata('password') AND $this->session->userdata('level')=='mahasiswa') {
       redirect(base_url('admin'));
     }
     $this->load->model(array('Login_model'));

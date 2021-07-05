@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>.:: Univ Langit Inspirasi ::.</title>
+  <title>.:: STMIK Mardira Indonesia ::.</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -34,26 +34,26 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-	<center><img width="100px" src="../assets/images/graduate_langitinspirasi.png"></center>    	 
-    <form action="<?php echo base_url('login/proses'); ?>" method="post"> 
-	<div class="row">		
-		<?php
-			// Validasi error, jika username atau password tidak cocok
-			if (validation_errors() || $this->session->flashdata('result_login')) {
-		?>
-			<div class="alert alert-danger animated fadeInDown" role="alert">
-					<button type="button" class="close" data-dismiss="alert">&times;</button>
-					<strong>Peringatan!</strong>
-					<?php 
-						// Menampilkan error
-						echo validation_errors(); 
-						// Session data users 
-					    echo $this->session->flashdata('result_login'); ?>
-			</div> 
-		<?php 
-			} 
-		?>		
-	 </div>
+    <center><img width="100px" src="../assets/images/logo.png"></center>    	 
+      <form action="<?php echo base_url('login/proses'); ?>" method="post"> 
+    <div class="row">		
+      <?php
+        // Validasi error, jika username atau password tidak cocok
+        if (validation_errors() || $this->session->flashdata('result_login')) {
+      ?>
+        <div class="alert alert-danger animated fadeInDown" role="alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Peringatan!</strong>
+            <?php 
+              // Menampilkan error
+              echo validation_errors(); 
+              // Session data users 
+                echo $this->session->flashdata('result_login'); ?>
+      </div> 
+      <?php 
+        } 
+      ?>		
+	  </div>
       <div class="form-group has-feedback">
         <input type="text" name="username" class="form-control" placeholder="Username" autofocus="true">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
