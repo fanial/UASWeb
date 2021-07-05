@@ -1,7 +1,7 @@
 	</div>
 			<!-- /.box-body -->
 			<div class="box-footer">
-				<center>SIAKAD <a href="http://www.langitinspirasi.co.id"><strong>Univ Langit Inspirasi</strong></a> - 2018</center>
+				<center>SIAKAD <a href="http://www.langitinspirasi.co.id"><strong>SIAKAD JUM'AT</strong></a> - 2021</center>
 			</div>
 			<!-- /.box-footer-->
 		  </div>
