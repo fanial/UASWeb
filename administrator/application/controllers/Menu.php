@@ -1,9 +1,4 @@
 <?php
-/*****************************************************/
-/* File       : Menu.php                             */
-/* Lokasi File: ./application/controllers/Menu.php   */
-/*---------------------------------------------------*/
-
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
@@ -31,7 +26,7 @@ class Menu extends CI_Controller
 		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
 		$dataAdm = array(	
 			'wa'       => 'Web administrator',
-			'univ'     => 'Universitas Langit Inspirasi',
+			'univ'     => 'STMIK Mardira Indonesia',
 			'username' => $rowAdm->username,
 			'email'    => $rowAdm->email,
 			'level'    => $rowAdm->level,
@@ -60,7 +55,7 @@ class Menu extends CI_Controller
 		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
 		$dataAdm = array(	
 			'wa'       => 'Web administrator',
-			'univ'     => 'Universitas Langit Inspirasi',
+			'univ'     => 'STMIK Mardira Indonesia',
 			'username' => $rowAdm->username,
 			'email'    => $rowAdm->email,
 			'level'    => $rowAdm->level,
@@ -125,7 +120,7 @@ class Menu extends CI_Controller
 		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
 		$dataAdm = array(	
 			'wa'       => 'Web administrator',
-			'univ'     => 'Universitas Langit Inspirasi',
+			'univ'     => 'STMIK Mardira Indonesia',
 			'username' => $rowAdm->username,
 			'email'    => $rowAdm->email,
 			'level'    => $rowAdm->level,

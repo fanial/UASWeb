@@ -1,9 +1,4 @@
 <?php
-/**********************************************************/
-/* File        : Kategori_model.php                      */
-/* Lokasi File : ./application/models/Kategori_model.php  */
-/*--------------------------------------------------------*/
-
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 

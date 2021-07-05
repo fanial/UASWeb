@@ -1,11 +1,4 @@
 <?php
-/****************************************************/
-/* File        : Krs_model.php                      */
-/* Lokasi File : ./application/models/Krs_model.php  */
-/* Copyright   : Yosef Murya & Badiyanto            */
-/* Publish     : Penerbit Langit Inspirasi          */
-/*--------------------------------------------------*/
-
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 

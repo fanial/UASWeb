@@ -1,10 +1,4 @@
 <?php
-/*****************************************************/
-/* File        : Admin.php                           */
-/* Lokasi File : ./application/controllers/Admin.php */
-/* Copyright   : Yosef Murya & Badiyanto             */
-/* Publish     : Penerbit Langit Inspirasi           */
-/*---------------------------------------------------*/
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 

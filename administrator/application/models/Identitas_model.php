@@ -1,9 +1,4 @@
 <?php
-/******************************************/
-/* File    :Identitas_model.php                       */
-/* Location: ./application/models/Identitas_model.php */
-/******************************************/
-
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
