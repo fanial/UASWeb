@@ -1,18 +1,18 @@
 <section class="content-header">
-      <h1> STMIK Mardira Indonesia </h1>
-      <ol class="breadcrumb">
-        <li><a href="../admin"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="<?php echo $back ?>">Users</a></li>
-        <li class="active"><?php echo $button ?> Users</li>
-      </ol>
-    </section>
-    <!-- Main content -->
-    <section class="content">
+	<h1> STMIK Mardira Indonesia </h1>
+	<ol class="breadcrumb">
+		<li><a href="../admin"><i class="fa fa-dashboard"></i> Home</a></li>
+		<li><a href="<?php echo $back ?>">Users</a></li>
+		<li class="active"><?php echo $button ?> Users</li>
+	</ol>
+</section>
+<!-- Main content -->
+<section class="content">
 
-      <!-- Default box -->
-      <div class="box">        
-        <div class="box-body">
-		
+	<!-- Default box -->
+	<div class="box">
+		<div class="box-body">
+
 			<!-- Form input atau edit Users -->
 			<h2 style="margin-top:0px">Users <?php echo $button ?></h2>
 			<form action="<?php echo $action; ?>" method="post">
@@ -22,64 +22,59 @@
 				</div>
 				<div class="form-group">
 					<label for="varchar">Password <?php echo form_error('password') ?></label>
-					<input type="text" class="form-control" name="password" id="password" placeholder="Password"  />
+					<input type="text" class="form-control" name="password" id="password" placeholder="Password" />
 				</div>
 				<div class="form-group">
 					<label for="varchar">Email <?php echo form_error('email') ?></label>
 					<input type="text" class="form-control" name="email" id="email" placeholder="Email" value="<?php echo $email; ?>" />
-				</div>		
+				</div>
 				<div class="form-group">
 					<label for="enum">Level <?php echo form_error('level') ?></label>
-					<select name="level" class="form-control select2" style="width: 100%;">		
+					<select name="level" class="form-control select2" style="width: 100%;">
 						<?php
-							if($level == 'admin'){
+						if ($level == 'admin') {
 						?>
 							<option value="admin" selected>Admin</option>
-							<option value="mahasiswa">Mahasiswa</option>
+							<option value="user">Mahasiswa</option>
 						<?php
-							}
-							elseif($level == 'mahasiswa'){
+						} elseif ($level == 'user') {
 						?>
 							<option value="admin">Admin</option>
-							<option value="mahasiswa" selected>Mahasiswa</option>
+							<option value="user" selected>Mahasiswa</option>
 						<?php
-							}
-							else{
+						} else {
 						?>
 							<option value="admin">Admin</option>
-							<option value="mahasiswa">Mahasiswa</option>
+							<option value="user">Mahasiswa</option>
 						<?php
-							}
+						}
 						?>
-					</select>            
+					</select>
 				</div>
 				<div class="form-group">
 					<label for="enum">Blokir <?php echo form_error('blokir') ?></label>
-					<select name="blokir" class="form-control select2" style="width: 100%;">		
+					<select name="blokir" class="form-control select2" style="width: 100%;">
 						<?php
-							if($blokir == 'Y'){
+						if ($blokir == 'Y') {
 						?>
 							<option value="Y" selected>Ya</option>
 							<option value="N">Tidak</option>
 						<?php
-							}
-							elseif($blokir == 'N'){
+						} elseif ($blokir == 'N') {
 						?>
 							<option value="Y">Ya</option>
 							<option value="N" selected>Tidak</option>
 						<?php
-							}
-							else{
+						} else {
 						?>
 							<option value="Y">Ya</option>
 							<option value="N">Tidak</option>
 						<?php
-							}
+						}
 						?>
-					</select>              
+					</select>
 				</div>
-				
-				<button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
+
+				<button type="submit" class="btn btn-primary"><?php echo $button ?></button>
 				<a href="<?php echo site_url('users') ?>" class="btn btn-default">Cancel</a>
 			</form>
-    
