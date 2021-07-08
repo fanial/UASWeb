@@ -37,6 +37,7 @@
 							<option value="admin" selected>Admin</option>
 							<option value="user">Mahasiswa</option>
 						<?php
+
 						} elseif ($level == 'user') {
 						?>
 							<option value="admin">Admin</option>

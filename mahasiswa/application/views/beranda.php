@@ -241,7 +241,7 @@
 		  </div>        
         <!-- /.box-body -->
         <div class="box-footer">
-         <center>SIAKAD <a href="http://www.langitinspirasi.co.id"><strong>Univ Langit Inspirasi</strong></a> - 2018</center>
+         <center>SIAKAD <a href="#"><strong>STMIK Mardira Indonesia</strong></a> - 2021</center>
         </div>
         <!-- /.box-footer-->
       </div>
@@ -256,7 +256,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
-    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+    <strong>Copyright &copy; 2021 <a href="https://adminlte.io">Rekayasa Perangkat Lunak</a>.</strong> All rights
     reserved.
   </footer>
 
