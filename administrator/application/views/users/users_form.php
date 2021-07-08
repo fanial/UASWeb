@@ -35,19 +35,19 @@
 							if($level == 'admin'){
 						?>
 							<option value="admin" selected>Admin</option>
-							<option value="mahasiswa">Mahasiswa</option>
+							<option value="user">Mahasiswa</option>
 						<?php
 							}
-							elseif($level == 'mahasiswa'){
+							elseif($level == 'user'){
 						?>
 							<option value="admin">Admin</option>
-							<option value="mahasiswa" selected>Mahasiswa</option>
+							<option value="user" selected>Mahasiswa</option>
 						<?php
 							}
 							else{
 						?>
 							<option value="admin">Admin</option>
-							<option value="mahasiswa">Mahasiswa</option>
+							<option value="user">Mahasiswa</option>
 						<?php
 							}
 						?>
