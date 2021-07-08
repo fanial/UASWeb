@@ -1,7 +1,7 @@
 	</div>
 			<!-- /.box-body -->
 			<div class="box-footer">
-				<center>SIAKAD <a href="http://www.langitinspirasi.co.id"><strong>STMIK Mardira Indonesia</strong></a> - 2021</center>
+				<center>SIAKAD <strong>JUM'AT</strong> - 2021</center>
 			</div>
 			<!-- /.box-footer-->
 		  </div>
