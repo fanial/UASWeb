@@ -1,9 +1,4 @@
 <?php
-/******************************************************/
-/* File        : Users_model.php                      */
-/* Lokasi File : ./application/models/Users_model.php */
-/*----------------------------------------------------*/
-
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 

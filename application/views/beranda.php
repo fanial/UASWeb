@@ -1,12 +1,3 @@
-<?php
-
-/*********************************************************/
-/* File        : beranda.php                             */
-/* Lokasi File : ./application/views/beranda.php         */
-/* Copyright   : Yosef Murya & Badiyanto                 */
-/* Publish     : Penerbit Langit Inspirasi               */
-/*-------------------------------------------------------*/
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,9 +46,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		<div class="wthree_agile_top_header">
 			<div class="logo-agileits">
-				<h1><a href="index.php"><img width="45px" src="images/langitinspirasi_putih.png"> <?php foreach ($identitas_data as $identitas) {
-																										echo strtoupper($identitas->nama_pemilik);
-																									} ?> <i class="fa fa-graduation-cap" aria-hidden="true"></i></a></h1>
+				<h1><a href="index.php"><img width="45px" src="images/logo.jpg"> <?php foreach ($identitas_data as $identitas) {
+																						echo strtoupper($identitas->nama_pemilik);
+																					} ?> <i class="fa fa-graduation-cap" aria-hidden="true"></i></a></h1>
 			</div>
 			<div class="agileits_w3layouts_sign_in">
 				<ul>
@@ -238,14 +229,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<?php
 			foreach ($tampilinformasi1_data as $tampilinformasi1) {
 			?>
-				<div class="col-md-6 news-agileits-right news2">
+				<div class="col-md-5 news-agileits-right news2">
 					<i><?php echo $tampilinformasi1->hari . ", " . tgl_indo($tampilinformasi1->tanggal); ?></i>
 					<p><?php echo substr($tampilinformasi1->isi_informasi, 0, 150)  ?>...</p>
 					<img src="<?php echo base_url('/assets/images/f3.jpg') ?>" alt="image">
 					<h6><?php echo $tampilinformasi1->username  ?></h6>
 				</div>
-				<div class="col-md-5 news-agileits-left video2">
-					<img src="<?php echo base_url('/images/info_kampus/') . $tampilinformasi1->gambar ?>" style="min-height: 395px; position: relative; width: 100%;" alt="image">
+				<div class="col-md-6 news-agileits-left video2">
+					<img src="<?php echo base_url('/images/info_kampus/') . $tampilinformasi1->gambar ?>" style="min-height: 413px; position: relative; width: 100%;" alt="image">
 					<div class="button">
 						<a href="#small-dialog1" class="play-icon popup-with-zoom-anim"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>
 					</div>
@@ -268,8 +259,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 			foreach ($tampilinformasi2_data as $tampilinformasi2) {
 			?>
-				<div class="col-md-5 news-agileits-left">
-					<img src="<?php echo base_url('/images/info_kampus/') . $tampilinformasi2->gambar ?>" style="min-height: 395px; position: relative; width: 100%;" alt="image">
+				<div class="col-md-6 news-agileits-left">
+					<img src="<?php echo base_url('/images/info_kampus/') . $tampilinformasi2->gambar ?>" style="min-height: 376px; position: relative; width: 100%;" alt="image">
 					<div class="button">
 						<a href="#small-dialog" class="play-icon popup-with-zoom-anim"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></a>
 					</div>
@@ -286,7 +277,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 news-agileits-right">
+				<div class="col-md-5 news-agileits-right">
 					<i><?php echo $tampilinformasi2->hari . ", " . tgl_indo($tampilinformasi2->tanggal); ?></i>
 					<p><?php echo substr($tampilinformasi2->isi_informasi, 0, 150)  ?>...</p>
 					<img src="<?php echo base_url('/assets/images/f3.jpg') ?>" alt="image">
@@ -434,9 +425,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="footer-main">
 				<div class="footer-top">
 					<div class="col-md-4 ftr-grid fg1">
-						<h3><a href="index.html"><span><img width="30px" src="images/langitinspirasi_putih.png"></span>&nbsp;<?php foreach ($identitas_data as $identitas) {
-																																	echo strtoupper($identitas->nama_pemilik);
-																																} ?> </a></h3>
+						<h3><a href="index.html"><span><img width="30px" src="images/logo.jpg"></span>&nbsp;<?php foreach ($identitas_data as $identitas) {
+																												echo strtoupper($identitas->nama_pemilik);
+																											} ?> </a></h3>
 						<p>STMIK Mardira Indonesia merupakan website yang dibuat menggunakan Framework CodeIgniter oleh Teknik Infomatika S1 - Rekayasa Perangkat Lunak</p>
 					</div>
 					<div class="col-md-4 ftr-grid fg2 mid-gd">

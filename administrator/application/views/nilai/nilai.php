@@ -1,7 +1,3 @@
-<!-------------------------------------------------------*/
-/* Copyright   : Yosef Murya & Badiyanto                 */
-/* Publish     : Penerbit Langit Inspirasi               */
-/*-------------------------------------------------------->
 <?php
 $ci = get_instance(); // Memanggil object utama	 
 $ci->load->helper('my_function'); // Memanggil fungsi pada helper dengan nama my_function

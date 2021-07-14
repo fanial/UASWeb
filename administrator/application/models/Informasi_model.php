@@ -1,9 +1,4 @@
 <?php
-/**********************************************************/
-/* File        : Informasi_model.php                      */
-/* Lokasi File : ./application/models/Informasi_model.php  */
-/*--------------------------------------------------------*/
-
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
