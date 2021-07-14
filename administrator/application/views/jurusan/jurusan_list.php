@@ -1,7 +1,6 @@
 <section class="content-header">
 	<h1>
 		STMIK Mardira Indonesia
-		<small>code your life with your style</small>
 	</h1>
 	<ol class="breadcrumb">
 		<li><a href="admin"><i class="fa fa-dashboard"></i> Home</a></li>
