@@ -4,11 +4,25 @@
 <!-- index-three19:35  -->
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Education Home Page3</title>
+    <?php
+	foreach ($identitas_data as $identitas) {
+	?>
+		<title>.:: <?php echo $identitas->judul_website; ?> ::.</title>
+	<?php
+	}
+	?>
+    <script type="application/x-javascript">
+		addEventListener("load", function() {
+			setTimeout(hideURLbar, 0);
+		}, false);
 
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
     <!-- Css Files -->
     <link href="<?php echo base_url('assets/css/bootstrap.css')?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/font-awesome.css')?>" rel="stylesheet">
@@ -18,9 +32,7 @@
     <link href="<?php echo base_url('assets/build/mediaelementplayer.css')?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/style.css')?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/color.css')?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/css/color-two.css')?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/color-three.css')?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/css/color-four.css')?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/responsive.css')?>" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -44,7 +56,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <ul class="wm-login-section">
-                                <li><a href="#" data-toggle="modal" data-target="#ModalLogin"><i class="wmicon-people"></i> Login or Register</a></li>
+                                <li><a href="mahasiswa"><i class="fa fa-user"></i> Portal Mahasiswa</a></li>
                             </ul>
                             <div class="wm-right-section">
                                 <ul class="wm-stripinfo">
@@ -791,39 +803,6 @@
             <!--// Main Section \\-->
 
             <!--// Main Section \\-->
-            <div class="wm-main-section">
-                <div class="container">
-                    <div class="row">
-                        
-                        <div class="col-md-12">
-                            <div class="wm-simple-section-title wm-partners-title-two"> <h2>University Partners</h2> </div>
-                            <div class="wm-partners-slider-two gallery">
-                                <div class="wm-partners-layer"> <a title="" data-rel="prettyPhoto[gallery1]" href="<?php echo base_url('assets/extra-images/university-partners-1.png')?>"> <img src="<?php echo base_url('assets/extra-images/university-partners-1.png')?>" alt=""> </a> </div>
-                                <div class="wm-partners-layer"> <a title="" data-rel="prettyPhoto[gallery1]" href="<?php echo base_url('assets/extra-images/university-partners-2.png')?>"> <img src="<?php echo base_url('assets/extra-images/university-partners-2.png')?>" alt=""> </a> </div>
-                                <div class="wm-partners-layer"> <a title="" data-rel="prettyPhoto[gallery1]" href="<?php echo base_url('assets/extra-images/university-partners-3.png')?>"> <img src="<?php echo base_url('assets/extra-images/university-partners-3.png')?>" alt=""> </a> </div>
-                                <div class="wm-partners-layer"> <a title="" data-rel="prettyPhoto[gallery1]" href="<?php echo base_url('assets/extra-images/university-partners-4.png')?>"> <img src="<?php echo base_url('assets/extra-images/university-partners-4.png')?>" alt=""> </a> </div>
-                                <div class="wm-partners-layer"> <a title="" data-rel="prettyPhoto[gallery1]" href="<?php echo base_url('assets/extra-images/university-partners-5.png')?>"> <img src="<?php echo base_url('assets/extra-images/university-partners-5.png')?>" alt=""> </a> </div>
-                                <div class="wm-partners-layer"> <a title="" data-rel="prettyPhoto[gallery1]" href="<?php echo base_url('assets/extra-images/university-partners-6.png')?>"> <img src="<?php echo base_url('assets/extra-images/university-partners-6.png')?>" alt=""> </a> </div>
-                                <div class="wm-partners-layer"> <a title="" data-rel="prettyPhoto[gallery1]" href="<?php echo base_url('assets/extra-images/university-partners-1.png')?>"> <img src="<?php echo base_url('assets/extra-images/university-partners-1.png')?>" alt=""> </a> </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!--// Main Section \\-->
-
-            <!--// Main Section \\-->
-            <div class="wm-main-section wm-maptwo-full">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div id="map" class="wm-maptwo"></div>
-                    </div>
-                </div>
-            </div>
-            <!--// Main Section \\-->
-
-            <!--// Main Section \\-->
             <div class="wm-main-section wm-contact-service-two-full">
                 <div class="container">
                     <div class="row">
@@ -1030,42 +1009,8 @@
     <script type="text/javascript" src="<?php echo base_url('assets/build/mediaelement-and-player.min.js')?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/script/isotope.min.js')?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/script/jquery.nicescroll.min.js')?>"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/script/functions.js')?>"></script>
-    <script>
-        google.maps.event.addDomListener(window, 'load', init);
-
-        function init() {
-            // Basic options for a simple Google Map
-            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-            var mapOptions = {
-                // How zoomed in you want the map to start at (always required)
-                zoom: 11,
-
-                // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(40.6700, -73.9400), // New York
-
-                // How you would like to style the map. 
-                // This is where you would paste any style found on Snazzy Maps.
-                styles: [{"featureType":"all","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#fecc1a"},{"lightness":"0"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#c0ff81"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#c0ff81"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":20},{"visibility":"simplified"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"weight":"1"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#ffc700"},{"lightness":"0"},{"gamma":"1"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#fecc1a"},{"lightness":"0"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#fecc1a"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#fecc1a"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#fecc1a"},{"lightness":"0"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":17}]}]
-            };
-
-            // Get the HTML DOM element that will contain your map 
-            // We are using a div with id="map" seen below in the <body>
-            var mapElement = document.getElementById('map');
-
-            // Create the Google Map using our element and options defined above
-            var map = new google.maps.Map(mapElement, mapOptions);
-
-            // Let's also add a marker while we're at it
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(40.6700, -73.9400),
-                map: map,
-                title: 'Snazzy!'
-            });
-        }
-    </script>
-
+    
   </body>
 
 <!-- index-three20:22  -->
