@@ -60,9 +60,9 @@
                             </ul>
                             <div class="wm-right-section">
                                 <ul class="wm-stripinfo">
-                                    <li><i class="wmicon-location"></i> 2925 Swick Hill Street, Charlotte, NC 28202</li>
-                                    <li><i class="wmicon-technology4"></i> +1 984-700-7129</li>
-                                    <li><i class="wmicon-time2"></i> Mon - fri: 7:00am - 6:00pm</li>
+                                    <li><i class="wmicon-location"></i> <?php echo $identitas->alamat ?></li>
+                                    <li><i class="wmicon-technology4"></i> <?php echo $identitas->telp ?></li>
+                                    <li><i class="wmicon-time2"></i> Mon - Sat : 08:00 - 15:00 WIB</li>
                                 </ul>
                                 <a href="#" class="wm-search-btn" data-toggle="modal" data-target="#ModalSearch"><i class="wmicon-search"></i></a>
                             </div>
@@ -76,7 +76,9 @@
             <div class="wm-main-header wm-bgcolor-three">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-2"><a href="index-two.html" class="wm-logo"><img src="<?php echo base_url('assets/images/logo-3.png')?>" alt=""></a></div>
+                        <div class="col-md-2"><a href="beranda.php" class="wm-logo"><?php foreach ($identitas_data as $identitas) {
+																						echo strtoupper($identitas->nama_pemilik);
+																					} ?></a></div>
                         <div class="col-md-10">
                             <div class="wm-right-section">
                                 <!--// Navigation \\-->
@@ -92,120 +94,27 @@
                                     <div class="collapse navbar-collapse" id="navbar-collapse-1">
                                       <ul class="nav navbar-nav">
                                     <li class="active"><a href="#">Home</a>
+                                    </li>
+                                    <li><a href="#materikuliah">Materi Kuliah</a>
+                                    </li>
+                                    <li><a href="#prodi">Program Studi</a>
                                         <ul class="wm-dropdown-menu">
-                                            <li><a href="index-2.html">Education Home V1</a></li>
-                                            <li><a href="index-two.html">Education Home V2</a></li>
-                                            <li><a href="index-three.html">Education Home V3</a></li>
-                                            <li><a href="index-four.html">Education Home V4</a></li>
+                                            <li><a href="#ti">Teknik Informatika S1</a></li>
+                                            <li><a href="#mi">Manajemen Informatika D3</a></li>
+                                            <li><a href="#ka">Komputerisasi Akuntansi D3</a></li>
+                                            <li><a href="#tid">Teknik Informatika D3</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">course</a>
-                                        <ul class="wm-dropdown-menu">
-                                            <li><a href="courses-grid.html">Courses Grid</a></li>
-                                            <li><a href="courses-list.html">Courses List</a></li>
-                                            <li><a href="courses-detail.html">Courses Detail</a></li>
-                                        </ul>
+                                    <li ><a href="#dosen">Dosen</a>
                                     </li>
-                                    <li><a href="#">event</a>
-                                        <ul class="wm-dropdown-menu">
-                                            <li><a href="event-grid.html">Event Grid</a></li>
-                                            <li><a href="event-detail.html">Event Detail</a></li>
-                                        </ul>
+                                    <li><a href="#informasikampus">Info Kampus</a>
                                     </li>
-                                    <li ><a href="#">Dashboard</a>
-                                        <ul class="wm-dropdown-menu">
-                                            <li><a href="dashboard-courses.html">Courses</a></li>
-                                            <li><a href="student-dashboard-favourite.html">Favourite</a></li>
-                                            <li><a href="student-dashboard-my-courses.html">My Courses</a></li>
-                                            <li><a href="student-dashboard-profile.html">Profile Settings</a></li>
-                                            <li><a href="student-dashboard-settings.html">Settings</a></li>
-                                            <li><a href="student-dashboard-statement.html">Statement</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="wm-megamenu-li"><a href="#">Pages</a>
-                                        <ul class="wm-megamenu">
-                                            <li class="row">
-                                                <div class="col-md-2">
-                                                    <h4>Link 1</h4>
-                                                    <ul class="wm-megalist">
-                                                        <li><a href="404-page.html">404 Error Page</a></li>
-                                                        <li><a href="about-us.html">About Us</a></li>
-                                                        <li><a href="blog-grid.html">Blog Grid</a></li>
-                                                        <li><a href="blog-list.html">Blog List</a></li>
-                                                        <li><a href="blog-detail.html">Blog Detail</a></li>
-                                                        <li><a href="faq-page.html">Faq Page</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-2">
-                                                    <h4>Link 2</h4>
-                                                    <ul class="wm-megalist">
-                                                        <li><a href="ourprofessors.html">Our Professors</a></li>
-                                                        <li><a href="our-professsors-detail.html">Our Professsors Detail</a></li>
-                                                        <li><a href="typography-elements.html">Typography Elements</a></li>
-                                                        <li><a href="courses-list.html">Courses List</a></li>
-                                                        <li><a href="courses-grid.html">Courses Grid</a></li>
-                                                        <li><a href="gallery.html">Gallery</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-2">
-                                                    <h4>Link 3</h4>
-                                                    <ul class="wm-megalist">
-                                                        <li><a href="courses-detail.html">Courses Detail</a></li>
-                                                        <li><a href="shop-list.html">Shop List</a></li>
-                                                        <li><a href="shop-grid.html">Shop Grid</a></li>
-                                                        <li><a href="shop-single-product.html">Shop Detail</a></li>
-                                                        <li><a href="contact-us.html">Contact Us</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <a href="#" class="wm-thumbnail">
-                                                        <img src="<?php echo base_url('assets/extra-images/megamenu-frame.jpg')?>" alt="" />
-                                                    </a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact-us.html">Shop</a>
-                                        <ul class="wm-dropdown-menu">
-                                            <li><a href="shop-grid.html">Shop Grid</a></li>
-                                            <li><a href="shop-list.html">Shop List</a></li>
-                                            <li><a href="shop-single-product.html">Shop Detail</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="wm-megamenu-li"><a href="#">Contact</a>
-                                        <ul class="wm-megamenu">
-                                            <li class="row">
-                                                <div class="col-md-2">
-                                                    <h4>Links 1</h4>
-                                                    <ul class="wm-megalist">
-                                                        <li><a href="contact-us.html">Contact Us</a></li>
-                                                        <li><a href="404-page.html">404 Error Page</a></li>
-                                                        <li><a href="shop-list.html">Shop List</a></li>
-                                                        <li><a href="shop-grid.html">Shop Grid</a></li>
-                                                        <li><a href="shop-single-product.html">Shop Detail</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-md-5">
-                                                    <h4>Artists text</h4>
-                                                    <div class="wm-mega-text">
-                                                        <p>Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love.</p>
-                                                        <p>If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-5">
-                                                    <h4>sub category widget</h4>
-                                                    <a href="#" class="wm-thumbnail">
-                                                        <img src="<?php echo base_url('assets/extra-images/mega-menuadd.jpg')?>" alt="" />
-                                                    </a>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    <li><a href="#contact">Kontak</a>
                                     </li>
                                   </ul>
                                     </div>
                                 </nav>
                                 <!--// Navigation \\-->
-                                <span class="wm-header-number">+1 414-899-9949</span>
                             </div>
                         </div>
                     </div>
@@ -221,15 +130,21 @@
             
             <div class="wm-banner-three">
                 <div class="wm-banner-three-layer">
-                    <img src="<?php echo base_url('assets/extra-images/banner-view3-1.jpg')?>" alt="">
+                <?php
+		            foreach ($tentang_data as $tentang) {
+		        ?>
+                    <img src="<?php echo base_url('assets/extra-images/banner-view3-1.jpg')?>" alt="bg tentang kampus">
                     <div class="wm-caption-three">
                         <div class="container">
                             <div class="wm-caption-three-inner">
-                                <h1>Students <span>don’t</span> just attend our university.</h1>
-                                <p>They discover diverse opportunities to develop talents, & become leaders, to have an impact on our campus.</p>
-                                <a class="wm-discover-btn wm-bgcolor-three" href="#">discover us</a>
+                                <h1><?php echo $tentang->judul_tentangkampus; ?></h1>
+                                <p><?php echo $tentang->isi_tentangkampus; ?></p>
+                                <a class="wm-discover-btn wm-bgcolor-three" href="#contact">discover us</a>
                             </div>
                         </div>
+                        <?php
+		                }
+		                ?>
                     </div>
                 </div>
                 <div class="wm-banner-three-layer">
@@ -238,20 +153,8 @@
                         <div class="container">
                             <div class="wm-caption-three-inner">
                                 <h1>Are you <span>one</span> of the best students here?</h1>
-                                <p>Medicine, Pharmacy and Physiotherapy for School Leaver, Graduate, Mature and Pharmacy Technician applicants.</p>
-                                <a class="wm-discover-btn wm-bgcolor-three" href="#">discover us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="wm-banner-three-layer">
-                    <img src="<?php echo base_url('assets/extra-images/banner-view3-3.jpg')?>" alt="">
-                    <div class="wm-caption-three">
-                        <div class="container">
-                            <div class="wm-caption-three-inner">
-                                <h1>Why <span>don’t</span> start the hard study?</h1>
-                                <p>Computer science is the study of computers and their uses, and the field comprises a wide range of subjects.</p>
-                                <a class="wm-discover-btn wm-bgcolor-three" href="#">discover us</a>
+                                <p><?php echo $tentang->keterangan_tambahan; ?></p>
+                                <a class="wm-discover-btn wm-bgcolor-three" href="#contact">discover us</a>
                             </div>
                         </div>
                     </div>
@@ -261,142 +164,97 @@
 		</div>
 		<!--// Main Banner \\-->
 
-		<!--// Main Content \\-->
+        <!--// Main Content \\-->
 		<div class="wm-main-content">
 
-			<!--// Main Section \\-->
-			<div class="wm-main-section wm-checkcourses-full">
+            <div class="wm-main-section wm-checkcourses-full">
 				<div class="container">
 					<div class="row">
 						
-						<div class="col-md-12">
+						<div class="col-md-12" id="materikuliah">
                             <div class="wm-fancy-title-three">
                                 <div class="wm-fancy-title-inner">
                                     <small class="wm-color-three">Check all</small>
-                                    <span class="wm-color-three">Our Courses</span>
+                                    <span class="wm-color-three">Materi Kuliah</span>
                                 </div>
                             </div>
 						</div>
-                        <aside class="col-md-4">
-                            <div class="widget wm_widget_navlist">
-                                <ul>
-                                    <li><a href="#">Computer Science</a></li>
-                                    <li><a href="#">Biomedical Ethics</a></li>
-                                    <li><a href="#">Chemistry</a></li>
-                                    <li><a href="#">Cognitive Science</a></li>
-                                    <li><a href="#">Biochemistry</a></li>
-                                    <li><a href="#">Geology</a></li>
-                                    <li><a href="#">Data Analysis & Statistics</a></li>
-                                    <li><a href="#">Computer Science</a></li>
-                                    <li><a href="#">Biomedical Ethics</a></li>
-                                    <li><a href="#">Chemistry</a></li>
-                                    <li><a href="#">Biochemistry</a></li>
-                                    <li><a href="#">Geology</a></li>
-                                </ul>
-                            </div>
-                        </aside>
-                        <div class="col-md-8">
-                            <div class="wm-search-courses">
-                                <h5 class="wm-color-three">Search Course</h5>
-                                <form>
-                                    <ul>
-                                        <li> <input type="text" value="Course Name" onblur="if(this.value == '') { this.value ='Course Name'; }" onfocus="if(this.value =='Course Name') { this.value = ''; }"> </li>
-                                        <li>
-                                            <div class="wm-apply-select">
-                                                <select>
-                                                    <option>Category</option>
-                                                    <option>Category</option>
-                                                    <option>Category</option>
-                                                    <option>Category</option>
-                                                </select>
-                                            </div>
-                                        </li>
-                                        <li> <label><input type="submit" value="" class="wm-bgcolor-three"> <i class="wmicon-search"></i></label> </li>
-                                    </ul>
-                                </form>
-                            </div>
-                            <div class="wm-courses wm-courses-medium">
-                                <ul class="row">
-                                    <li class="col-md-12">
-                                        <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/data-seince-1.jpg')?>" alt=""></a> <span>$32</span></figure>
-                                        <div class="courses-medium-text">
-                                            <h5><a href="#" class="wm-color-three">Data Science & Engineering</a></h5>
-                                            <p>You will be introduced to the study of human physiology, human anatomy, pharmacology and neuroscience.</p>
-                                            <ul class="courses-options">
-                                                <li><i class="wmicon-social7"></i> <a href="#">342</a></li>
-                                                <li><i class="wmicon-social6"></i> <a href="#">10</a></li>
-                                                <li><i class="wmicon-black"></i> <a href="#">Anne J.</a></li>
-                                                <li><i class="wmicon-time2"></i> <a href="#">1 year</a></li>
-                                                <li><i class="wmicon-location"></i> <a href="#">Campus L2</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <?php
+					        foreach ($materiperkuliahan_data as $materiperkuliahan) {
+					    ?>
+						<div class="col-sm-4 services-right-grid">
+							<br />
+							<div class="wm-ctservice-icon wm-color">
+								<i class="<?php echo $materiperkuliahan->icon; ?>" aria-hidden="true"></i>
+							</div>
+							<div class="courses-options">
+								<h5><?php echo $materiperkuliahan->judul_materiperkuliahan; ?></h5>
+								<p><?php echo $materiperkuliahan->isi_materiperkuliahan; ?></p>
+							</div>
+						</div>
+					    <?php
+					    }
+					    ?>
+                    </div>
 
-					</div>
-				</div>
-			</div>
-			<!--// Main Section \\-->
+                    </div>
+                </div>
+            </div>
+            <!--// Main Section \\-->
 
             <!--// Main Section \\-->
             <div class="wm-main-section wm-popular-coursesgrid-full">
                 <div class="container">
                     <div class="row">
                         
-                        <div class="col-md-12">
+                        <div class="col-md-12" id="prodi">
                             <div class="wm-fancy-title-three wm-align-center">
                                 <div class="wm-fancy-title-inner">
-                                    <small class="wm-color-three">see our</small>
-                                    <span class="wm-color-three">popular courses</span>
+                                    <small class="wm-color-three">Check All</small>
+                                    <span class="wm-color-three">Program Studi</span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="wm-courses wm-courses-grid">
                                 <ul class="row">
-                                    <li class="col-md-3">
-                                        <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/courses-grid-popular-1.jpg')?>" alt=""></a> <span>$32</span> <figcaption> <a href="#" class="wm-coursemodren-btn wm-color-three">See course</a> </figcaption> </figure>
+                                    <li class="col-md-3" id="ti">
+                                        <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/courses-grid-popular-1.jpg')?>" alt="">
                                         <div class="wm-courses-grid-text">
-                                            <h5><a href="#" class="wm-color-three">Data Science & Engineering</a></h5>
+                                            <h5><a href="#" class="wm-color-three">Teknik Informatika S1</a></h5>
                                             <ul class="courses-options">
                                                 <li><i class="wmicon-social7"></i> <a href="#">342</a></li>
-                                                <li><i class="wmicon-social6"></i> <a href="#">10</a></li>
-                                                <li><i class="wmicon-black"></i> <a href="#">Anne J.</a></li>
+                                                <li><i class="wmicon-black"></i> <a href="#">Rohmat Nur Ibrahim, M.T</a></li>
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="col-md-3">
-                                        <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/courses-grid-popular-2.jpg')?>" alt=""></a> <span>Free</span> <figcaption> <a href="#" class="wm-coursemodren-btn wm-color-three">See course</a> </figcaption> </figure>
+                                    <li class="col-md-3" id="mi">
+                                        <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/courses-grid-popular-2.jpg')?>" alt="">
                                         <div class="wm-courses-grid-text">
-                                            <h5><a href="#" class="wm-color-three">Fundamentals of Computer Science</a></h5>
+                                            <h5><a href="#" class="wm-color-three">Manajemen Informatika D3</a></h5>
                                             <ul class="courses-options">
                                                 <li><i class="wmicon-social7"></i> <a href="#">399</a></li>
-                                                <li><i class="wmicon-social6"></i> <a href="#">17</a></li>
-                                                <li><i class="wmicon-black"></i> <a href="#">Jesie M</a></li>
+                                                <li><i class="wmicon-black"></i> <a href="#">Jajat Sudrajat, M.Kom</a></li>
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="col-md-3">
-                                        <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/courses-grid-popular-3.jpg')?>" alt=""></a> <span>$37</span> <figcaption> <a href="#" class="wm-coursemodren-btn wm-color-three">See course</a> </figcaption> </figure>
+                                    <li class="col-md-3" id="ka">
+                                        <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/courses-grid-popular-3.jpg')?>" alt=""></a> 
                                         <div class="wm-courses-grid-text">
-                                            <h5><a href="#" class="wm-color-three">Data Science and Analytics</a></h5>
+                                            <h5><a href="#" class="wm-color-three">Komputerisasi Akuntansi D3</a></h5>
                                             <ul class="courses-options">
                                                 <li><i class="wmicon-social7"></i> <a href="#">212</a></li>
-                                                <li><i class="wmicon-social6"></i> <a href="#">19</a></li>
-                                                <li><i class="wmicon-black"></i> <a href="#">Kate H.</a></li>
+                                                <li><i class="wmicon-black"></i> <a href="#">Rinawati, S.Pd, M.M</a></li>
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="col-md-3">
-                                        <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/courses-grid-popular-4.jpg')?>" alt=""></a> <span>$45</span> <figcaption> <a href="#" class="wm-coursemodren-btn wm-color-three">See course</a> </figcaption> </figure>
+                                    <li class="col-md-3" id="tid">
+                                        <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/courses-grid-popular-4.jpg')?>" alt=""></a> 
                                         <div class="wm-courses-grid-text">
-                                            <h5><a href="#" class="wm-color-three"> CLEP Information Systems</a></h5>
+                                            <h5><a href="#" class="wm-color-three">Teknik Informatika D3</a></h5>
                                             <ul class="courses-options">
                                                 <li><i class="wmicon-social7"></i> <a href="#">432</a></li>
-                                                <li><i class="wmicon-social6"></i> <a href="#">27</a></li>
-                                                <li><i class="wmicon-black"></i> <a href="#">James I</a></li>
+                                                <li><i class="wmicon-black"></i> <a href="#">Heri Wahyudi, M.Kom</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -415,71 +273,114 @@
                     <div class="row">
                         
                         <div class="col-md-12">
-                            <div class="wm-fancy-title-three">
+                            <div class="wm-fancy-title-three" id="informasikampus">
                                 <div class="wm-fancy-title-inner">
-                                    <small class="wm-color-three">apply to our</small>
-                                    <span class="wm-color-three">latest events</span>
+                                    <small class="wm-color-three">Pusat</small>
+                                    <span class="wm-color-three">Informasi Kampus</span>
                                 </div>
                             </div>
                         </div>
+                        <?php
+			            foreach ($tampilinformasi1_data as $tampilinformasi1) {
+			            ?>
                         <div class="col-md-8">
                             <div class="wm-event wm-event-medium">
                                 <ul class="row">
                                     <li class="col-md-12">
                                         <div class="wm-event-medium-wrap">
-                                            <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/latest-eventpop-1.jpg')?>" alt=""></a> <figcaption class="wm-linkhover"><a href="#" class="wmicon-link wm-icon-link wm-color-three"></a></figcaption> </figure>
+                                            <figure><a href="#"><img src="<?php echo base_url('/images/info_kampus/') . $tampilinformasi1->gambar ?>" alt=""></a> <figcaption class="wm-linkhover"><a data-toggle="modal" data-target="#infokampus" href="#" class="wmicon-link wm-icon-link wm-color-three" ></a></figcaption></figure>
                                             <div class="wm-eventmedium-text">
-                                                <h5><a href="#">Seminar by Haitham Cruickshank</a></h5>
-                                                <p>Over the last 30 years, Nadia Magnenat Thalmann has them worked as a pioneer to model and simulate behaviour.</p>
-                                                <time datetime="2008-02-14 20:00" class="wm-color-three"><i class="wmicon-clock2"></i> Show runs April 12-29.</time>
+                                                <h5><a href="#" data-toggle="modal" data-target="#infokampus"><?php echo $tampilinformasi1->judul_informasi; ?></a></h5>
+                                                <p><?php echo substr($tampilinformasi1->isi_informasi, 0, 150)  ?> ...</p>
+                                                <time datetime="2008-02-14 20:00" class="wm-color-three"><i class="wmicon-clock2"></i> Show runs <?php echo tgl_indo($tampilinformasi1->tanggal); ?></time>
                                             </div>
-                                            <div class="wm-event-time wm-bgcolor-three">Apr <span class="wm-color-three">12</span></div>
+                                            <div class="wm-event-time wm-bgcolor-three"><?php echo $tampilinformasi1->hari ;?> </div>
                                         </div>
                                     </li>
+
+                                    <!-- Modal  -->
+                                    <div class="modal fade left-modalbox" id="infokampus" tabindex="-1" role="dialog">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+            
+                                                    <div class="wm-modallogin-form wm-login-popup">
+                                                        <span class="wm-color"><?php echo $tampilinformasi1->judul_informasi; ?></span>
+                                                        <p><strong>Kategori : </strong><?php echo $tampilinformasi1->nama_kategori; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Diposting oleh : </strong><?php echo $tampilinformasi1->username; ?></p>
+									                    <img src="<?php echo base_url('/images/info_kampus/') . $tampilinformasi1->gambar ?>" alt=" " class="img-responsive" />
+									                    <p><?php echo $tampilinformasi1->isi_informasi; ?></p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Modal Box -->
+
+                                    <?php
+			                        } 
+                                    foreach ($tampilinformasi2_data as $tampilinformasi2) {
+                                    ?>
                                     <li class="col-md-12">
                                         <div class="wm-event-medium-wrap">
-                                            <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/latest-eventpop-2.jpg')?>" alt=""></a> <figcaption class="wm-linkhover"><a href="#" class="wmicon-link wm-icon-link wm-color-three"></a></figcaption> </figure>
+                                            <figure><a href="#"><img src="<?php echo base_url('/images/info_kampus/') . $tampilinformasi2->gambar ?>" alt=""></a> <figcaption class="wm-linkhover"><a href="#" data-toggle="modal" data-target="#infokampus2" class="wmicon-link wm-icon-link wm-color-three"></a></figcaption> </figure>
                                             <div class="wm-eventmedium-text">
-                                                <h5><a href="#">Joint open day with the Mathematics Institute</a></h5>
-                                                <p>Open days are held at the Department to provide also the prospective students (and their families/teachers).</p>
-                                                <time datetime="2008-02-14 20:00" class="wm-color-three"><i class="wmicon-clock2"></i> Show runs April 10-24.</time>
+                                                <h5><a href="#" data-toggle="modal" data-target="#infokampus2"><?php echo $tampilinformasi2->judul_informasi; ?></a></h5>
+                                                <p><?php echo substr($tampilinformasi1->isi_informasi, 0, 150)  ?> ...</p>
+                                                <time datetime="2008-02-14 20:00" class="wm-color-three"><i class="wmicon-clock2"></i> Show runs <?php echo tgl_indo($tampilinformasi2->tanggal); ?></time>
                                             </div>
-                                            <div class="wm-event-time wm-bgcolor-three">Apr <span class="wm-color-three">10</span></div>
+                                            <div class="wm-event-time wm-bgcolor-three"><?php echo $tampilinformasi2->hari ;?></div>
                                         </div>
                                     </li>
-                                    <li class="col-md-12">
-                                        <div class="wm-event-medium-wrap">
-                                            <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/latest-eventpop-3.jpg')?>" alt=""></a> <figcaption class="wm-linkhover"><a href="#" class="wmicon-link wm-icon-link wm-color-three"></a></figcaption> </figure>
-                                            <div class="wm-eventmedium-text">
-                                                <h5><a href="#">Luis Barbosa (Universidade do Minho)</a></h5>
-                                                <p>Trains, cars and planes - security in the fast lane: The most increasing relevance of cyber security to connected.</p>
-                                                <time datetime="2008-02-14 20:00" class="wm-color-three"><i class="wmicon-clock2"></i> Show runs April 8-19.</time>
+
+                                    <!-- Modal  -->
+                                    <div class="modal fade left-modalbox" id="infokampus2" tabindex="-1" role="dialog">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+            
+                                                    <div class="wm-modallogin-form wm-login-popup">
+                                                        <span class="wm-color"><?php echo $tampilinformasi2->judul_informasi; ?></span>
+                                                        <p><strong>Kategori : </strong><?php echo $tampilinformasi2->nama_kategori; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Diposting oleh : </strong><?php echo $tampilinformasi2->username; ?></p>
+									                    <img src="<?php echo base_url('/images/info_kampus/') . $tampilinformasi2->gambar ?>" alt=" " class="img-responsive" />
+									                    <p><?php echo $tampilinformasi2->isi_informasi; ?></p>
+
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="wm-event-time wm-bgcolor-three">Apr <span class="wm-color-three">8</span></div>
+                                            <div class="clearfix"></div>
                                         </div>
-                                    </li>
+                                    </div>
+                                    <!-- Modal Box -->
+                                    <div class="clearfix"></div>
+			                        <?php
+			                        }
+			                        ?>
                                 </ul>
                             </div>
                         </div>
+
                         <div class="col-md-4">
                             <div class="wm-event wm-event-featured wm-left-spacer">
                                 <ul class="row">
                                     <li class="col-md-12">
                                         <figure>
-                                            <a href="#"><img src="<?php echo base_url('assets/extra-images/featured-image-1.jpg')?>" alt=""></a>
-                                            <div class="wm-event-time wm-bgcolor-three">May <span class="wm-color-three">17</span></div>
+                                            <a href="#"><img src="<?php echo base_url('/images/info_kampus/') . $tampilinformasi1->gambar ?>" alt=""></a>
                                             <span class="wm-featured-label"><small>Featured Event</small></span>
+                                            <div class="wm-event-time wm-bgcolor-three"><?php echo $tampilinformasi1->hari ;?>/div>
+                                            
                                         </figure>
                                         <div class="wm-event-featured-text">
-                                            <h5><a href="#">Kurt Jackson: The Great Bees</a></h5>
-                                            <p>Kurt Jackson’s art is a celebration of the natural world. Recently he has been inspired by the bees he encounters at home in Cornwall and across the UK.</p>
-                                            <time datetime="2008-02-14 20:00" class="wm-color-three"><i class="wmicon-clock2"></i> Show runs May 17-20.</time>
+                                            <h5><a href="#"><?php echo $tampilinformasi1->judul_informasi; ?></a></h5>
+                                            <p><?php echo substr($tampilinformasi1->isi_informasi, 0, 150)  ?> ...</p>
+                                            <time datetime="2008-02-14 20:00" class="wm-color-three"><i class="wmicon-clock2"></i> Show runs <?php echo tgl_indo($tampilinformasi1->tanggal); ?></time>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-12"> <div class="wm-allevents-view"><a href="#" class="wm-bgcolor-three">all events</a></div> </div>
+                        <!-- <div class="col-md-12"> <div class="wm-allevents-view"><a href="#" class="wm-bgcolor-three">all events</a></div> </div> -->
 
                     </div>
                 </div>
@@ -845,23 +746,6 @@
 
 		<!--// Footer \\-->
 		<footer id="wm-footer" class="wm-footer-three">
-
-            <!--// NewsLatter \\-->
-            <div class="wm-newslatter-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h2><i class="fa fa-paper-plane-o"></i> Sign Up</h2>
-                            <p>Subscribe to our newsletter to get the latest news & updates.</p>
-                            <form>
-                                <input type="text" value="Your E-mail Address" onblur="if(this.value == '') { this.value ='Your E-mail Address'; }" onfocus="if(this.value =='Your E-mail Address') { this.value = ''; }">
-                                <input type="submit" value="subscribe">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--// NewsLatter \\-->
 
             <!--// Footer Widget \\-->
             <div class="wm-footer-widget">
