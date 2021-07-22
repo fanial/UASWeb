@@ -428,7 +428,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<h3><a href="index.html"><span><img width="30px" src="images/logo.jpg"></span>&nbsp;<?php foreach ($identitas_data as $identitas) {
 																												echo strtoupper($identitas->nama_pemilik);
 																											} ?> </a></h3>
-						<p>STMIK Mardira Indonesia merupakan website yang dibuat menggunakan Framework CodeIgniter oleh Teknik Infomatika S1 - Rekayasa Perangkat Lunak</p>
+						<p></p>
 					</div>
 					<div class="col-md-4 ftr-grid fg2 mid-gd">
 						<h3>Alamat</h3>

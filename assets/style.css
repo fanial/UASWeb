@@ -213,7 +213,7 @@ option {
 }
 li {
     line-height: 28px;
-    list-style: inside none disc;
+    list-style: inside none;
 }
 ul ul {
     margin-left: 20px;
@@ -1492,7 +1492,7 @@ ul li:hover .wm-modren-service-wrap                 { border-color: #3ec694; }
 .wm-courses,.wm-courses-popular-wrap,.wm-courses-popular-wrap figure,
 .wm-courses-popular-wrap > figure > a,.wm-courses-popular-wrap > figure > a img,
 .wm-courses-popular figcaption,.wm-popular-courses-text,.wm-popular-courses-text ul {
-    float: left;
+    
     width: 100%;
 }
 .wm-courses.wm-modren-courses > ul > li         { margin-bottom: 0px; }
@@ -3657,6 +3657,7 @@ ul li:last-child .wm-latest-news-wrap {
     width: 50%;
     height: 2px;
     background-color: #eeeeee;
+    
 }
 .wm-ctservice-icon {
     display: inline-block;

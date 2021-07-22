@@ -56,13 +56,15 @@
                     <div class="row">
                         <div class="col-md-12">
                             <ul class="wm-login-section">
-                                <li><a href="mahasiswa"><i class="fa fa-user"></i> Portal Mahasiswa</a></li>
+                            <li><?php foreach ($identitas_data as $identitas) {
+								echo strtoupper($identitas->nama_pemilik);
+								} ?></li>
                             </ul>
                             <div class="wm-right-section">
                                 <ul class="wm-stripinfo">
                                     <li><i class="wmicon-location"></i> <?php echo $identitas->alamat ?></li>
                                     <li><i class="wmicon-technology4"></i> <?php echo $identitas->telp ?></li>
-                                    <li><i class="wmicon-time2"></i> Mon - Sat : 08:00 - 15:00 WIB</li>
+                                    <li><a href="mahasiswa"><i class="fa fa-user"></i> Portal Mahasiswa</a></li>
                                 </ul>
                                 <a href="#" class="wm-search-btn" data-toggle="modal" data-target="#ModalSearch"><i class="wmicon-search"></i></a>
                             </div>
@@ -76,13 +78,12 @@
             <div class="wm-main-header wm-bgcolor-three">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-2"><a href="beranda.php" class="wm-logo"><?php foreach ($identitas_data as $identitas) {
-																						echo strtoupper($identitas->nama_pemilik);
-																					} ?></a></div>
-                        <div class="col-md-10">
+                        <div class="col-md-12">
+                        <a href="#" class="wm-logo"><img width="50px" src="<?php echo base_url('assets/images/logo.png')?>" alt=""></a>
                             <div class="wm-right-section">
                                 <!--// Navigation \\-->
                                 <nav class="navbar navbar-default">
+                                
                                     <div class="navbar-header">
                                       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="true">
                                         <span class="sr-only">Toggle navigation</span>
@@ -92,7 +93,7 @@
                                       </button>
                                     </div>
                                     <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                                      <ul class="nav navbar-nav">
+                                    <ul class="nav navbar-nav">
                                     <li class="active"><a href="#">Home</a>
                                     </li>
                                     <li><a href="#materikuliah">Materi Kuliah</a>
@@ -105,9 +106,13 @@
                                             <li><a href="#tid">Teknik Informatika D3</a></li>
                                         </ul>
                                     </li>
+                                    <li><a href="#informasikampus">Info Kampus</a>
+                                    </li>
                                     <li ><a href="#dosen">Dosen</a>
                                     </li>
-                                    <li><a href="#informasikampus">Info Kampus</a>
+                                    <li ><a href="#gallery">Gallery</a>
+                                    </li>
+                                    <li ><a href="#fasilitas">Fasilitas</a>
                                     </li>
                                     <li><a href="#contact">Kontak</a>
                                     </li>
@@ -327,7 +332,7 @@
                                             <figure><a href="#"><img src="<?php echo base_url('/images/info_kampus/') . $tampilinformasi2->gambar ?>" alt=""></a> <figcaption class="wm-linkhover"><a href="#" data-toggle="modal" data-target="#infokampus2" class="wmicon-link wm-icon-link wm-color-three"></a></figcaption> </figure>
                                             <div class="wm-eventmedium-text">
                                                 <h5><a href="#" data-toggle="modal" data-target="#infokampus2"><?php echo $tampilinformasi2->judul_informasi; ?></a></h5>
-                                                <p><?php echo substr($tampilinformasi1->isi_informasi, 0, 150)  ?> ...</p>
+                                                <p><?php echo substr($tampilinformasi2->isi_informasi, 0, 150)  ?> ...</p>
                                                 <time datetime="2008-02-14 20:00" class="wm-color-three"><i class="wmicon-clock2"></i> Show runs <?php echo tgl_indo($tampilinformasi2->tanggal); ?></time>
                                             </div>
                                             <div class="wm-event-time wm-bgcolor-three"><?php echo $tampilinformasi2->hari ;?></div>
@@ -368,7 +373,7 @@
                                         <figure>
                                             <a href="#"><img src="<?php echo base_url('/images/info_kampus/') . $tampilinformasi1->gambar ?>" alt=""></a>
                                             <span class="wm-featured-label"><small>Featured Event</small></span>
-                                            <div class="wm-event-time wm-bgcolor-three"><?php echo $tampilinformasi1->hari ;?>/div>
+                                            <div class="wm-event-time wm-bgcolor-three"><?php echo $tampilinformasi1->hari ;?></div>
                                             
                                         </figure>
                                         <div class="wm-event-featured-text">
@@ -393,11 +398,11 @@
                 <div class="container">
                     <div class="row">
                         
-                        <div class="col-md-12">
+                        <div class="col-md-12" id="dosen">
                             <div class="wm-parallex">
-                                <h2>University Faculty Professors</h2>
+                                <h2>Dosen Pengajar</h2>
                                 <span>Meet our professional teachers who love to teach you things!</span>
-                                <a class="wm-transparent-button" href="#"><span>see all</span></a>
+                                <!-- <a class="wm-transparent-button" href="#"><span>see all</span></a> -->
                             </div>
                         </div>
 
@@ -410,336 +415,112 @@
             <div class="wm-main-section">
                 <div class="container-fluid">
                     <div class="row">
-                        
+                    <?php
+				    foreach ($dosen_data as $dosen) {
+				    ?>
                         <div class="wm-courses wm-modren-courses wm-modren-color">
                             <ul>
                                 <li class="col-md-3">
-                                    <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/modren-courses-5.jpg')?>" alt=""></a> <h2 class="wm-course-captiontitle">John D. Archuleta</h2>
-                                        <figcaption>
-                                            <h3><a href="#">John D. Archuleta</a></h3>
-                                            <p>Crean College of Health and Behavioral Sciences; Department of Health Sciences.</p>
-                                            <a href="#" class="wm-course-see-btn">read more</a>
-                                        </figcaption>
-                                    </figure>
-                                </li>
-                                <li class="col-md-3">
-                                    <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/modren-courses-6.jpg')?>" alt=""></a> <h2 class="wm-course-captiontitle">Joseph S. Lane</h2>
-                                        <figcaption>
-                                            <h3><a href="#">Joseph S. Lane</a></h3>
-                                            <p>Our two-year Conservatory education prepares our graduates with the power to impact audiences.</p>
-                                            <a href="#" class="wm-course-see-btn">read more</a>
-                                        </figcaption>
-                                    </figure>
-                                </li>
-                                <li class="col-md-3">
-                                    <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/modren-courses-7.jpg')?>" alt=""></a> <h2 class="wm-course-captiontitle">Richard K. Simmons</h2>
-                                        <figcaption>
-                                            <h3><a href="#">Richard K. Simmons</a></h3>
-                                            <p>Our two-year Conservatory education prepares our graduates with the power to impact audiences.</p>
-                                            <a href="#" class="wm-course-see-btn">read more</a>
-                                        </figcaption>
-                                    </figure>
-                                </li>
-                                <li class="col-md-3">
-                                    <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/modren-courses-8.jpg')?>" alt=""></a> <h2 class="wm-course-captiontitle">Robert S. David</h2>
-                                        <figcaption>
-                                            <h3><a href="#">Robert S. David</a></h3>
-                                            <p>Our two-year Conservatory education prepares our graduates with the power to impact audiences.</p>
-                                            <a href="#" class="wm-course-see-btn">read more</a>
+                                    <figure><a href="#"><img src="<?php echo base_url('/images/dosen/') . $dosen->photo ?>" alt=""></a> <h2 class="wm-course-captiontitle"><?php echo $dosen->nama_dosen; ?></h2>
+                                    <figcaption>
+                                            <h3><a href="#"><?php echo $dosen->nama_dosen; ?></a></h3>
+                                            <p>Teknik Informatika S1 - Rekayasa Perangkat Lunak</p>
                                         </figcaption>
                                     </figure>
                                 </li>
                             </ul>
                         </div>
-
+                        <?php
+				}
+				?>
                     </div>
                 </div>
             </div>
             <!--// Main Section \\-->
+
 
             <!--// Main Section \\-->
             <div class="wm-main-section wm-studentslove-full">
-                <div class="container">
-                    <div class="row">
-                        
-                        <div class="col-md-12">
-                            <div class="wm-fancy-title-three">
-                                <div class="wm-fancy-title-inner">
-                                    <small class="wm-color-three">check why</small>
-                                    <span class="wm-color-three">students love us</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6"> <video src="<?php echo base_url('assets/build/echo-hereweare.mp4')?>" poster="<?php echo base_url('assets/build/echo-hereweare.jpg')?>" controls="controls" preload="none"></video> </div>
-                        <div class="col-md-6">
-                            <div class="wm-recent-list-slider">
-                                <div class="wm-recent-list-layer">
-                                    <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/recent-list-1.jpg')?>" alt=""></a></figure>
-                                    <div class="wm-recent-list-text">
-                                        <p>“Studying at you guys brought an added value to my professional life. The courses were very interesting and the professors were.”</p>
-                                        <a href="#" class="wm-color-three">-Shelly A. Nunez</a>
-                                    </div>
-                                </div>
-                                <div class="wm-recent-list-layer">
-                                    <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/recent-list-2.jpg')?>" alt=""></a></figure>
-                                    <div class="wm-recent-list-text">
-                                        <p>“Enroll is very unique in terms of the social academic environment.”</p>
-                                        <a href="#" class="wm-color-three">-Joseph R. Spence</a>
-                                    </div>
-                                </div>
-                                <div class="wm-recent-list-layer">
-                                    <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/recent-list-3.jpg')?>" alt=""></a></figure>
-                                    <div class="wm-recent-list-text">
-                                        <p>“ The knowledge acquired in several courses could readily be used in my new job responsibilities”</p>
-                                        <a href="#" class="wm-color-three">-Pamela M. Blevins</a>
-                                    </div>
-                                </div>
-                                <div class="wm-recent-list-layer">
-                                    <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/recent-list-2.jpg')?>" alt=""></a></figure>
-                                    <div class="wm-recent-list-text">
-                                        <p>“Enroll is very unique in terms of the social academic environment.”</p>
-                                        <a href="#" class="wm-color-three">-Joseph R. Spence</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!--// Main Section \\-->
-
-            <!--// Main Section \\-->
-            <div class="wm-main-section wm-latestnews-full">
-                <div class="container">
-                    <div class="row">
-                        
-                        <div class="col-md-12">
-                            <div class="wm-fancy-title-three wm-align-center">
-                                <div class="wm-fancy-title-inner">
-                                    <small class="wm-color-three">read our</small>
-                                    <span class="wm-color-three">latest news</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="wm-blog wm-blog-grid">
-                                <ul class="row">
-                                    <li class="col-md-4">
-                                        <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/latest-news-grid-1.jpg')?>" alt=""></a>
-                                            <figcaption>
-                                                <div class="wm-grid-caption">
-                                                    <a href="#" data-toggle="tooltip" data-placement="top" title="News Detail"><i class="wmicon-link"></i></a>
-                                                    <a href="#" data-toggle="tooltip" data-placement="top" title="3 comments"><i class="fa fa-comments-o"></i></a>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                        <div class="wm-blog-grid-text">
-                                            <h5><a href="#" class="wm-color-three">Students engage MPs with scientific research</a></h5>
-                                            <ul class="blogpost-options">
-                                                <li><i class="wmicon-time"></i> April 7, 2016</li>
-                                                <li><i class="wmicon-people"></i> <a href="#">Admin</a></li>
-                                                <li><i class="fa fa-folder-o"></i> <a href="#">Business</a></li>
-                                            </ul>
-                                            <p>PhD students from the Faculty of Engineering had the opportunity to present their research.</p>
-                                            <a href="#" class="wm-readarticle-btn">read article</a>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-4">
-                                        <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/latest-news-grid-2.jpg')?>" alt=""></a>
-                                            <figcaption>
-                                                <div class="wm-grid-caption">
-                                                    <a href="#" data-toggle="tooltip" data-placement="top" title="News Detail"><i class="wmicon-link"></i></a>
-                                                    <a href="#" data-toggle="tooltip" data-placement="top" title="3 comments"><i class="fa fa-comments-o"></i></a>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                        <div class="wm-blog-grid-text">
-                                            <h5><a href="#" class="wm-color-three">Dr Jem Bloomfield answers the Big Questions</a></h5>
-                                            <ul class="blogpost-options">
-                                                <li><i class="wmicon-time"></i> April 6, 2016</li>
-                                                <li><i class="wmicon-people"></i> <a href="#">Admin</a></li>
-                                                <li><i class="fa fa-folder-o"></i> <a href="#">Science</a></li>
-                                            </ul>
-                                            <p>Dr Jem Bloomfield Assistant Professor Literature in the School of English.</p>
-                                            <a href="#" class="wm-readarticle-btn">read article</a>
-                                        </div>
-                                    </li>
-                                    <li class="col-md-4">
-                                        <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/latest-news-grid-3.jpg')?>" alt=""></a>
-                                            <figcaption>
-                                                <div class="wm-grid-caption">
-                                                    <a href="#" data-toggle="tooltip" data-placement="top" title="News Detail"><i class="wmicon-link"></i></a>
-                                                    <a href="#" data-toggle="tooltip" data-placement="top" title="3 comments"><i class="fa fa-comments-o"></i></a>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                        <div class="wm-blog-grid-text">
-                                            <h5><a href="#" class="wm-color-three">How do crisis and opportunity work in unison?</a></h5>
-                                            <ul class="blogpost-options">
-                                                <li><i class="wmicon-time"></i> April 5, 2016</li>
-                                                <li><i class="wmicon-people"></i> <a href="#">Admin</a></li>
-                                                <li><i class="fa fa-folder-o"></i> <a href="#">Computer</a></li>
-                                            </ul>
-                                            <p>“Only a crisis – actual or perceived – produces real change,” wrote Milton Friedman, economist.</p>
-                                            <a href="#" class="wm-readarticle-btn">read article</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!--// Main Section \\-->
-
-            <!--// Main Section \\-->
-            <div class="wm-main-section wm-ourhistorytwo-full">
-                <span class="wm-light-transparent wm-more-dark-black"></span>
-                <div class="container">
-                    <div class="row">
-                        
-                        <div class="col-md-5">
-                            <div class="wm-history-defoult wm-history-list-color">
-                                <h2>Our History</h2>
-                                <ul>
-                                    <li>
-                                        <time datetime="2008-02-14 20:00">2016</time>
-                                        <span>Released the Arctic Collection the Perennial Collection of handknotted luxury area rugs.</span>
-                                    </li>
-                                    <li>
-                                        <time datetime="2008-02-14 20:00">2015</time>
-                                        <span>Installed our first custom floorcovering for a museum at the Aga Khan Museum in Toronto</span>
-                                    </li>
-                                    <li>
-                                        <time datetime="2008-02-14 20:00">2014</time>
-                                        <span>Designed our first wallcovering for all these healthcare sector at the Toronto Centre.</span>
-                                    </li>
-                                    <li>
-                                        <time datetime="2008-02-14 20:00">2013</time>
-                                        <span>Celebrated 25 years in business with “The Art Day Project” – a partnership.</span>
-                                    </li>
-                                    <li>
-                                        <time datetime="2008-02-14 20:00">2016</time>
-                                        <span>Released the Arctic Collection the Perennial Collection of handknotted luxury area rugs.</span>
-                                    </li>
-                                    <li>
-                                        <time datetime="2008-02-14 20:00">2015</time>
-                                        <span>Installed our first custom floorcovering for a museum at the Aga Khan Museum in Toronto</span>
-                                    </li>
-                                    <li>
-                                        <time datetime="2008-02-14 20:00">2014</time>
-                                        <span>Designed our first wallcovering for all these healthcare sector at the Toronto Centre.</span>
-                                    </li>
-                                    <li>
-                                        <time datetime="2008-02-14 20:00">2013</time>
-                                        <span>Celebrated 25 years in business with “The Art Day Project” – a partnership.</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-7">
-                            <div class="wm-subscribe-form wm-subscribe-color">
-                                <h2>Still not convinced? We can help you!</h2>
-                                <p>Fill out the form below and we will contact you.</p>
-                                <form>
-                                    <input type="text" value="Name:" onblur="if(this.value == '') { this.value ='Name:'; }" onfocus="if(this.value =='Name:') { this.value = ''; }">
-                                    <input type="email" value="E-mail:" onblur="if(this.value == '') { this.value ='E-mail:'; }" onfocus="if(this.value =='E-mail:') { this.value = ''; }">
-                                    <input type="submit" value="Get Advice">
-                                </form>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!--// Main Section \\-->
-
-            <!--// Main Section \\-->
-            <div class="wm-main-section wm-testimonial-nav-full">
                 <div class="container-fluid">
                     <div class="row">
                         
-                        <div class="col-md-12">
+                        <div class="col-md-12" id="gallery">
                             <div class="wm-fancy-title-three wm-align-center">
                                 <div class="wm-fancy-title-inner">
                                     <small class="wm-color-three">our latest</small>
-                                    <span class="wm-color-three">testimonials</span>
+                                    <span class="wm-color-three">Gallery</span>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="wm-testimonial-navslider">
-                            <div class="wm-testimonial-navlayer">
-                                <img src="<?php echo base_url('assets/images/testimonial-comment.png')?>" alt="">
-                                <span class="wm-color-three">I am very happy to be a student at Enroll Campus</span>
-                                <p>The biggest challenge in studying with the OU is you’re on your own a lot of the time. You have to motivate yourself and keep going. Then of course balancing the study.</p>
-                                <div class="wm-testimonial-image">
-                                    <figure><img src="<?php echo base_url('assets/extra-images/testimonial-nav-slider-1.jpg')?>" alt=""> <figcaption><small class="wm-color-three">Joel J. Reynolds</small> <a href="#">www.joelreynolds.com</a> </figcaption></figure>
-                                </div>
-                            </div>
-                            <div class="wm-testimonial-navlayer">
-                                <img src="<?php echo base_url('assets/images/testimonial-comment.png')?>" alt="">
-                                <span class="wm-color-three">Still not convinced? We can help you!</span>
-                                <p>The biggest challenge in studying with the OU is you’re on your own a lot of the time. You have to motivate yourself and keep going. Then of course balancing the study.</p>
-                                <div class="wm-testimonial-image">
-                                    <figure><img src="<?php echo base_url('assets/extra-images/testimonial-nav-slider-2.jpg')?>" alt=""> <figcaption><small class="wm-color-three">-Joseph R. Spence</small> <a href="#">www.joelreynolds.com</a> </figcaption></figure>
-                                </div>
-                            </div>
-                            <div class="wm-testimonial-navlayer">
-                                <img src="<?php echo base_url('assets/images/testimonial-comment.png')?>" alt="">
-                                <span class="wm-color-three">I am very happy to be a student at Enroll Campus</span>
-                                <p>The biggest challenge in studying with the OU is you’re on your own a lot of the time. You have to motivate yourself and keep going. Then of course balancing the study.</p>
-                                <div class="wm-testimonial-image">
-                                    <figure><img src="<?php echo base_url('assets/extra-images/testimonial-nav-slider-3.jpg')?>" alt=""> <figcaption><small class="wm-color-three">-Shelly A. Nunez</small> <a href="#">www.joelreynolds.com</a> </figcaption></figure>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="wm-gallery">
+                            <ul class="row">
+                                <?php
+				                foreach ($tampilgallery_data as $gallery) {
+				                ?>
+                                <li class="col-md-3 wordpress">
+                                    <figure>
+                                        <a href="#"><img src="<?php echo base_url('/images/gallery/') . $gallery->gambar ?>" alt=""></a>
+                                        <figcaption>
+                                            <div class="wm-gallery-text">
+                                                <a href="#" class="wmicon-search wm-icon-gallery"></a>
+                                                <h6><?php echo $gallery->judul_gallery ?></h6>
+                                            </div>								
+                                        </figcaption>											
+                                    </figure>
+                                </li>
+                                <?php
+                                }
+                                ?>
+                            </ul>
+                        </div>                  
                         
-
                     </div>
                 </div>
             </div>
             <!--// Main Section \\-->
+            
 
             <!--// Main Section \\-->
             <div class="wm-main-section wm-contact-service-two-full">
                 <div class="container">
                     <div class="row">
+
+                        <div class="col-md-12" id="fasilitas">
+                            <div class="wm-fancy-title-three wm-align-center">
+                                <div class="wm-fancy-title-inner">
+                                    <small class="wm-color-three">Check all</small>
+                                    <span class="wm-color-three">Fasilitas</span>
+                                </div>
+                            </div>
+                        </div>
                         
                         <div class="col-md-12 wm-contact-main wm-contact-main-color">
-                            <div class="wm-contact-service-two">
+                            <div class="wm-contact-service-two"
+                            
                                 <ul class="row">
-                                    <li class="col-md-4">
-                                        <span class="wm-ctservice-icon wm-bgcolor-two"><i class="wmicon-pin"></i></span>
-                                        <h5 class="wm-color">Address</h5>
-                                        <p>195 Cooks Mine Road Espanola, NM 87532</p>
-                                    </li>
-                                    <li class="col-md-4">
-                                        <span class="wm-ctservice-icon wm-bgcolor-two"><i class="wmicon-phone"></i></span>
-                                        <h5 class="wm-color">Phone & Fax</h5>
-                                        <p>+1 505-753-5656 +1 505-753-4437</p>
-                                    </li>
-                                    <li class="col-md-4">
-                                        <span class="wm-ctservice-icon wm-bgcolor-two"><i class="wmicon-letter"></i></span>
-                                        <h5 class="wm-color">E-mail</h5>
-                                        <p><a href="mailto:name@email.com">Info@university.com</a> <a href="mailto:name@email.com">support@university.com</a></p>
+                                <?php
+					                foreach ($fasilitas_data as $fasilitas) {
+					                ?>
+                                    <li class="col-md-3 services-right-grid">
+                                        <span class="wm-ctservice-icon wm-bgcolor-two"><i class="<?php echo $fasilitas->icon_fasilitas; ?>"></i></span>
+                                        <!-- <h5 class="wm-color">Address</h5> -->
+                                        <p><?php echo $fasilitas->nama_fasilitas;?></p>
                                     </li>
                                 </ul>
+                                <?php
+					            }
+					            ?>
                             </div>
-                            <ul class="contact-social-icon">
-                                <li><a href="#"><i class="wm-color wmicon-social5"></i> Facebook</a></li>
-                                <li><a href="#"><i class="wm-color wmicon-social4"></i> Twitter</a></li>
-                                <li><a href="#"><i class="wm-color wmicon-social3"></i> Linkedin</a></li>
-                                <li><a href="#"><i class="wm-color wmicon-vimeo"></i> Vimeo</a></li>
-                            </ul>
                         </div>
-
+                        
                     </div>
                 </div>
             </div>
             <!--// Main Section \\-->
+
+            
+
 
 		</div>
 		<!--// Main Content \\-->
@@ -751,35 +532,40 @@
             <div class="wm-footer-widget">
                 <div class="container">
                     <div class="row">
+                            <?php
+							foreach ($identitas_data as $identitas) {
+							?>
                         <aside class="col-md-3 widget widget_blogpost">
-                            <div class="wm-footer-widget-title"><h2>Latest Blog Post</h2></div>
-                            <figure><a href="#"><img src="<?php echo base_url('assets/extra-images/blogpost-widget.jpg')?>" alt=""></a> <a href="#" class="wm-hover-link"><i class="wmicon-link wm-color-three"></i></a></figure>
+                            <div class="wm-footer-widget-title"><h2>About this web</h2></div>
+                            <figure><a href="#"><img src="<?php echo base_url('assets/images/logo.png')?>" alt=""></a> <a href="#" class="wm-hover-link"><i class="wmicon-link wm-color-three"></i></a></figure>
                             <div class="widget-blogpost-text">
-                                <h6><a href="#" class="wm-color-three">Students engage MPs with those scientific research</a></h6>
-                                <p>PhD students from the Faculty of the Engineering had the opportunity.</p>
+                                <h6><a href="#" class="wm-color-three"><?php echo ($identitas->nama_pemilik); ?></a></h6>
+                                <p>merupakan website yang dibuat menggunakan Framework CodeIgniter oleh Teknik Infomatika S1 - Rekayasa Perangkat Lunak</p>
                             </div>
                         </aside>
-                        <aside class="col-md-3 widget widget_contact_list">
+                        <aside class="col-md-3 widget widget_contact_list" id="contact">
                             <div class="wm-footer-widget-title"><h2>Get in Touch</h2></div>
                             <ul>
-                                <li><i class="wm-color-three wmicon-location"></i> 4702 Larry Street <br> New Berlin, WI 53151</li>
-                                <li><i class="wm-color-three wmicon-technology4"></i> +1 414-899-9949 <br> +1 414-899-0435</li>
-                                <li><i class="wm-color-three wmicon-symbol3"></i> <a href="mailto:name@email.com">info@university.com</a> <a href="mailto:name@email.com">support@enroll.com</a></li>
+                                <li><i class="wm-color-three wmicon-location"></i> <?php echo $identitas->alamat ?></li>
+                                <li><i class="wm-color-three wmicon-technology4"></i><?php echo $identitas->telp ?></li>
+                                <li><i class="wm-color-three wmicon-symbol3"></i> <a href="mailto:<?php echo $identitas->email ?>">i<?php echo $identitas->email ?></a>
                                 <li class="wm-social-btn"><i class="wm-color-three wmicon-web"></i> <a href="#">facebook</a> <br> <a href="#">linkedin</a> <br> <a href="#">twitter</a></li>
                             </ul>
                         </aside>
                         <aside class="col-md-6 widget widget_contact_form">
                             <div class="wm-footer-widget-title"><h2>Contact Form</h2></div>
-                            <form>
+                            <form action="<?php echo $action; ?>" method="post">
                                 <ul>
-                                    <li> <input type="text" value="Name" onblur="if(this.value == '') { this.value ='Name'; }" onfocus="if(this.value =='Name') { this.value = ''; }"> </li>
-                                    <li> <input type="text" value="E-mail" onblur="if(this.value == '') { this.value ='E-mail'; }" onfocus="if(this.value =='E-mail') { this.value = ''; }"> </li>
-                                    <li> <input type="text" value="Subject" onblur="if(this.value == '') { this.value ='Subject'; }" onfocus="if(this.value =='Subject') { this.value = ''; }"> </li>
-                                    <li class="wm-textarea-full"> <textarea placeholder="Message"></textarea> </li>
+                                    <li> <input name="nama" type="text" value="Name" onblur="if(this.value == '') { this.value ='Name'; }" onfocus="if(this.value =='Name') { this.value = ''; }"> </li>
+                                    <li> <input class="email" name="email" type="text" value="E-mail" onblur="if(this.value == '') { this.value ='E-mail'; }" onfocus="if(this.value =='E-mail') { this.value = ''; }"> </li>
+                                    <li class="wm-textarea-full"> <textarea name="pesan" required="" placeholder="Message"></textarea> </li>
                                     <li class="wm-textarea-full"> <input type="submit" value="Send Message"> </li>
                                 </ul>
                             </form>
                         </aside>
+                        <?php
+							}
+							?>
                     </div>
                 </div>
             </div>

@@ -76,7 +76,7 @@ class Beranda extends CI_Controller
 								  WHERE informasi.id_kategori = kategori.id_kategori
 								  AND informasi.aktif='Y' 
 								  ORDER BY id_informasi 
-								  DESC LIMIT 1,1";
+								  DESC LIMIT 1,2";
 		$tampilInformasikampus2 = $this->db->query($queryInformasikampus2)->result();
 
 		// Query gallery
