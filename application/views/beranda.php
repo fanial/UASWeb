@@ -10,7 +10,7 @@
     <?php
 	foreach ($identitas_data as $identitas) {
 	?>
-		<title>.:: <?php echo $identitas->judul_website; ?> ::.</title>
+		<title><?php echo $identitas->judul_website; ?></title>
 	<?php
 	}
 	?>
@@ -41,6 +41,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link rel="icon" href="<?php echo base_url('assets/images/logo.png')?>">
   </head>
   <body>
 	
@@ -153,7 +154,7 @@
                     </div>
                 </div>
                 <div class="wm-banner-three-layer">
-                    <img src="<?php echo base_url('assets/extra-images/banner-view3-2.jpg')?>" alt="">
+                    <img src="<?php echo base_url('assets/extra-images/conservatory-bg-2.jpg')?>" alt="">
                     <div class="wm-caption-three">
                         <div class="container">
                             <div class="wm-caption-three-inner">
@@ -548,8 +549,12 @@
                             <ul>
                                 <li><i class="wm-color-three wmicon-location"></i> <?php echo $identitas->alamat ?></li>
                                 <li><i class="wm-color-three wmicon-technology4"></i><?php echo $identitas->telp ?></li>
-                                <li><i class="wm-color-three wmicon-symbol3"></i> <a href="mailto:<?php echo $identitas->email ?>">i<?php echo $identitas->email ?></a>
-                                <li class="wm-social-btn"><i class="wm-color-three wmicon-web"></i> <a href="#">facebook</a> <br> <a href="#">linkedin</a> <br> <a href="#">twitter</a></li>
+                                <li><i class="wm-color-three wmicon-symbol3"></i> <a href="mailto:<?php echo $identitas->email ?>"><?php echo $identitas->email ?></a>
+                                <li class="wm-social-btn"><i class="wm-color-three wmicon-web"></i>
+                                    <a href="https://facebook.com/stmik.mardira">facebook</a> <br> 
+                                    <a href="https://www.instagram.com/stmikmardira/">instagram</a> <br> 
+                                    <a href="https://www.twitter.com/stmikmardira/">twitter</a>
+                                </li>
                             </ul>
                         </aside>
                         <aside class="col-md-6 widget widget_contact_form">
@@ -558,6 +563,7 @@
                                 <ul>
                                     <li> <input name="nama" type="text" value="Name" onblur="if(this.value == '') { this.value ='Name'; }" onfocus="if(this.value =='Name') { this.value = ''; }"> </li>
                                     <li> <input class="email" name="email" type="text" value="E-mail" onblur="if(this.value == '') { this.value ='E-mail'; }" onfocus="if(this.value =='E-mail') { this.value = ''; }"> </li>
+                                    <li> <input class="telp" name="telp" type="text" value="Nomor Telpon" onblur="if(this.value == '') { this.value ='Nomor Telpon'; }" onfocus="if(this.value =='Nomor Telpon') { this.value = ''; }"> </li>
                                     <li class="wm-textarea-full"> <textarea name="pesan" required="" placeholder="Message"></textarea> </li>
                                     <li class="wm-textarea-full"> <input type="submit" value="Send Message"> </li>
                                 </ul>
@@ -577,8 +583,8 @@
                 <div class="row">
                     <div class="wm-copyright-three">
                         <div class="row">
-                            <div class="col-md-6"> <span><i class="wmicon-nature wm-color-three"></i> Barcelona, Spain 2°F / -17°C</span> </div>
-                            <div class="col-md-6"> <a target="_blank" href="https://www.templateshub.net">Templates Hub</a></p> </div>
+                            <div class="col-md-6">Rekayasa Perangkat Lunak 2020</span> </div>
+                            <div class="col-md-6"> <a target="_blank" href="#">All Right Reserved &copy; Teknik Informatika - STMIK Mardira Indonesia</a></p> </div>
                         </div>
                     </div>
                 </div>
@@ -592,56 +598,7 @@
     </div>
     <!--// Main Wrapper \\-->
 
-    <!-- ModalLogin Box -->
-    <div class="modal fade left-modalbox" id="ModalLogin" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-            
-            <div class="wm-modallogin-form wm-login-popup">
-                <span class="wm-color">Login or Register</span>
-                <form>
-                    <ul>
-                        <li> <input type="text" value="Your Username" onblur="if(this.value == '') { this.value ='Your Username'; }" onfocus="if(this.value =='Your Username') { this.value = ''; }"> </li>
-                        <li> <input type="password" value="password" onblur="if(this.value == '') { this.value ='password'; }" onfocus="if(this.value =='password') { this.value = ''; }"> </li>
-                        <li> <a href="#" class="wm-forgot-btn">Forgot Password?</a> </li>
-                        <li> <input type="submit" value="Sign In"> </li>
-                    </ul>
-                </form>
-                <span class="wm-color">or try our socials</span>
-                <ul class="wm-login-social-media">
-                    <li><a href="#"><i class="wmicon-social5"></i> Facebook</a></li>
-                    <li class="wm-twitter-color"><a href="#"><i class="wmicon-social4"></i> twitter</a></li>
-                    <li class="wm-googleplus-color"><a href="#"><i class="fa fa-google-plus-square"></i> Google+</a></li>
-                </ul>
-                <p>Not a member yet? <a href="#">Sign-up Now!</a></p>
-            </div>
-            <div class="wm-modallogin-form wm-register-popup">
-                <span class="wm-color">create Your Account today</span>
-                <form>
-                    <ul>
-                        <li> <input type="text" value="Your Username" onblur="if(this.value == '') { this.value ='Your Username'; }" onfocus="if(this.value =='Your Username') { this.value = ''; }"> </li>
-                        <li> <input type="text" value="Your E-mail" onblur="if(this.value == '') { this.value ='Your E-mail'; }" onfocus="if(this.value =='Your E-mail') { this.value = ''; }"> </li>
-                        <li> <input type="password" value="password" onblur="if(this.value == '') { this.value ='password'; }" onfocus="if(this.value =='password') { this.value = ''; }"> </li>
-                        <li> <input type="text" value="Confirm Password" onblur="if(this.value == '') { this.value ='Confirm Password'; }" onfocus="if(this.value =='Confirm Password') { this.value = ''; }"> </li>
-                        <li> <input type="submit" value="Create Account"> </li>
-                    </ul>
-                </form>
-                <span class="wm-color">or signup with your socials:</span>
-                <ul class="wm-login-social-media">
-                    <li><a href="#"><i class="wmicon-social5"></i> Facebook</a></li>
-                    <li class="wm-twitter-color"><a href="#"><i class="wmicon-social4"></i> twitter</a></li>
-                    <li class="wm-googleplus-color"><a href="#"><i class="fa fa-google-plus-square"></i> Google+</a></li>
-                </ul>
-                <p>Already a member? <a href="#">Sign-in Here!</a></p>
-            </div>
-
-          </div>
-        </div>
-      <div class="clearfix"></div>
-      </div>
-    </div>
-    <!-- ModalLogin Box -->
+    
 
     <!-- ModalSearch Box -->
     <div class="modal fade wm-change-bgcolor" id="ModalSearch" tabindex="-1" role="dialog">

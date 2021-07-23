@@ -1,12 +1,4 @@
 <?php
-
-/*********************************************************/
-/* File        : Informasi.php                           */
-/* Lokasi File : ./application/controllers/Informasi.php */
-/* Copyright   : Yosef Murya & Badiyanto                 */
-/* Publish     : Penerbit Langit Inspirasi               */
-/*-------------------------------------------------------*/
-
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Beranda extends CI_Controller

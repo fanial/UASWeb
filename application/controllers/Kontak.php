@@ -1,11 +1,4 @@
 <?php 
-/*********************************************************/
-/* File        : Kontak.php                           */
-/* Lokasi File : ./application/controllers/Kontak.php */
-/* Copyright   : Yosef Murya & Badiyanto                 */
-/* Publish     : Penerbit Langit Inspirasi               */
-/*-------------------------------------------------------*/
-
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 

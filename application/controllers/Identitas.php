@@ -1,12 +1,5 @@
 <?php
 
-/*********************************************************/
-/* File        : Identitas.php                           */
-/* Lokasi File : ./application/controllers/Identitas.php */
-/* Copyright   : Yosef Murya & Badiyanto                 */
-/* Publish     : Penerbit Langit Inspirasi               */
-/*-------------------------------------------------------*/
-
 if (!defined('BASEPATH'))
 	exit('No direct script access allowed');
 

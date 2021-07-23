@@ -1,10 +1,4 @@
 <?php
-/*********************************************************/
-/* File        : Informasi.php                           */
-/* Lokasi File : ./application/controllers/Informasi.php */
-/* Copyright   : Yosef Murya & Badiyanto                 */
-/* Publish     : Penerbit Langit Inspirasi               */
-/*-------------------------------------------------------*/
 
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
@@ -37,7 +31,7 @@ class Informasi extends CI_Controller
 		$row = $this->Users_model->get_by_id($this->session->userdata['username']);
 		$data = array(	
 			'wa'       => 'Web administrator',
-			'univ'     => 'Universitas Langit Inspirasi',
+			'univ'     => 'STMIK Mardira Indonesia',
 			'username' => $row->username,
 			'email'    => $row->email,
 			'level'    => $row->level,
@@ -91,7 +85,7 @@ class Informasi extends CI_Controller
 		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
 		$dataAdm = array(	
 				'wa'       => 'Web administrator',
-				'univ'     => 'Universitas Langit Inspirasi',
+				'univ'     => 'STMIK Mardira Indonesia',
 				'back'   => site_url('informasi'),
 				'username' => $rowAdm->username,
 				'email'    => $rowAdm->email,
@@ -207,7 +201,7 @@ class Informasi extends CI_Controller
 		$rowAdm = $this->Users_model->get_by_id($this->session->userdata['username']);
 		$dataAdm = array(	
 				'wa'       => 'Web administrator',
-				'univ'     => 'Universitas Langit Inspirasi',
+				'univ'     => 'STMIK Mardira Indonesia',
 				'back'   => site_url('informasi'),
 				'username' => $rowAdm->username,
 				'email'    => $rowAdm->email,

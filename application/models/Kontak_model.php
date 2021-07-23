@@ -2,8 +2,6 @@
 /********************************************************/
 /* File        : Kontak_model.php                       */
 /* Lokasi File : ./application/models/Kontak_model.php  */
-/* Copyright   : Yosef Murya & Badiyanto                */
-/* Publish     : Penerbit Langit Inspirasi              */
 /*------------------------------------------------------*/
 
 if (!defined('BASEPATH'))
