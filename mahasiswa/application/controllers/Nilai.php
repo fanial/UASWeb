@@ -9,10 +9,10 @@ class Nilai extends CI_Controller
   // Konstruktor	
   function __construct()
     {
-        parent::__construct();
-        $this->load->model('Transkrip_model'); // Memanggil Transkrip_model yang terdapat pada models
+		parent::__construct();
+		$this->load->model('Transkrip_model'); // Memanggil Transkrip_model yang terdapat pada models
 		$this->load->model('Users_model'); // Memanggil Users_model yang terdapat pada models
-        $this->load->library('form_validation'); // Memanggil form_validation yang terdapat pada library
+		$this->load->library('form_validation'); // Memanggil form_validation yang terdapat pada library
 		$this->load->helper('my_function'); // Memanggil fungsi my_function yang terdapat pada helper	
     }
   
@@ -20,7 +20,7 @@ class Nilai extends CI_Controller
   public function index(){
 	  // Jika session data username tidak ada maka akan dialihkan kehalaman login			
 	  if (!isset($this->session->userdata['username'])) {
-	 	redirect(base_url("login"));
+			redirect(base_url("login"));
 	  }
 	
 	  // Menampilkan data berdasarkan id-nya yaitu username
