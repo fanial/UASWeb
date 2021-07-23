@@ -154,7 +154,7 @@
                     </div>
                 </div>
                 <div class="wm-banner-three-layer">
-                    <img src="<?php echo base_url('assets/extra-images/conservatory-bg-2.jpg')?>" alt="">
+                    <img src="<?php echo base_url('assets/extra-images/conservatory-bg-3.jpg')?>" alt="">
                     <div class="wm-caption-three">
                         <div class="container">
                             <div class="wm-caption-three-inner">
