@@ -22,11 +22,9 @@
 				</div>
 				<div class="col-md-4 text-center">
 					<div style="margin-top: 4px"  id="message">
-						<?php echo $this->session->userdata('message') <> '' ? $this->session->userdata('message') : ''; ?>
 					</div>
 				</div>
 				<div class="col-md-4 text-right">
-					<?php echo anchor(site_url('mahasiswa/create'), '<i class="fa fa-file-text" aria-hidden="true"></i>&nbsp;Create', 'class="btn btn-primary"'); ?>
 				</div>
 			</div>
 			<table class="table table-bordered table-striped" id="mytable">
