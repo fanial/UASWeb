@@ -61,11 +61,7 @@
 						?>
 					 </td>
 					 <td style="text-align:center" width="120px">
-						<?php 	
-							// Button untuk melakukan edit KRS
-							echo anchor(site_url('krs/update/'.$krs->id_krs),
-								 '<button type="button" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></button>'); 
-							echo '&nbsp';
+						<?php 
 							// Button untuk melakukan delete KRS
 							echo anchor(site_url('krs/delete/'.$krs->id_krs),
 								 '<button type="button" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button>',
